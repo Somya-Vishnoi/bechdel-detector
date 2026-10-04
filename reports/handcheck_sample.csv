@@ -1,0 +1,51 @@
+human_label,film_title,speaker_1,speaker_2,male_talk_score,male_mentions,total_words,text,film_id,conv_id
+,mr. deeds goes to town,AMY,JANE,0.2353,4,17,"He walks in the rain, without his hat, and talks to himself. Sometimes he whistles. And sings.",m140,conv_19764
+,stepmom,ANNABELLE,JACKIE,0.12,3,25,"Keep Ben's for awhile, okay?  Until he's old enough to not open them all at once. Until he's old enough to read.",m533,conv_72594
+,harold and maude,EDITH,MRS. CHASEN,0.125,4,32,"This way, Edith. Harold is out by the garage. He has a new car and he has been tuning it up. He's very mechanical. What kind of a car is it?",m84,conv_11613
+,hannah and her sisters,HANNAH,LEE,0.1139,9,79,"Oh, he's fine.  He's-he's, I guess he's fine.  I don't know.  He's been kinda moody lately, the last few months. Really? Yeah.  I-I don't know what's wrong with him.  He's just...kind of distant and difficult. Oh... I've been trying to talk to him about it.  He says everything's fine, but I don't know. Automatically, you know, I leap to the worst conclusions. Like what?",m380,conv_53041
+,bound,CORKY,VIOLET,0.1176,2,17,"Gino Marzzone. Marzzone?  As in Angelo Marzzone, head of the Marzzone family? That's his brother. ...  shit.",m281,conv_39585
+,new nightmare,DR. HEFNER,HEATHER,0.1489,7,47,"No way he's going anywhere.  He's been well sedated. He doesn't have to be awake to be on his feet. What? He sleepwalks, you idiot!  He's fully capable of walking out of this hospital.  Oh my God...He thinks I've gone home...",m227,conv_31933
+,a nightmare on elm street 3: dream warriors,KRISTEN,NANCY,0.1538,2,13,"Joey needs us.  I can feel him. How do we find him, Kristen?",m461,conv_63050
+,the birds,CATHY,LYDIA,0.1667,1,6,Mother! If your father were here...,m208,conv_29309
+,austin powers: international man of mystery,MRS. KENSINGTON,VANESSA,0.1111,3,27,"Oh, hello Vanessa. How was the flight? Great. How's Austin? He's asleep. You didn't... Oh, God no, I made him sleep on the couch.",m22,conv_2972
+,the night of the hunter,RACHEL COOPER,RUBY,0.1667,2,12,What'd you all talk about? Pearl and John. John and Pearl!,m147,conv_20970
+,bound,CORKY,VIOLET,0.1111,1,9,"I'm just asking, what if? If he does ...",m281,conv_39595
+,the haunting,NELL,THEO,0.1159,8,69,"Marrow said the same thing as last night, he <u>says</u> --  -- that he checked with Mrs. Dudley.  And he says that she told him that all the fireplaces in the West Wing connect to the main chimney.  He says that he thinks that the flue was open, and with the windstorm, he says that what probably happened was some kind of freak air current -- -- What do you think?",m551,conv_74957
+,ghost world,ENID,REBECCA,0.1111,1,9,It's obviously him! I can't believe it!,m72,conv_10049
+,the piano,AUNT MORAG,NESSIE,0.2857,2,7,Careful! Watch his hand. Watch his hand,m567,conv_76801
+,my girl,SHELLY,VADA,0.1667,1,6,He's allergic to everything. Chocolate?,m451,conv_62030
+,legally blonde,ELLE,SERENA,0.125,2,16,You guys -- I can't. We're in the middle of a trial. Where's Warner?,m117,conv_16504
+,his girl friday,HILDY,MOLLIE,0.2222,2,9,They'll get him! They'll get him! Ssh!,m90,conv_12600
+,10 things i hate about you,BIANCA,KAT,0.2,1,5,Patrick -- is that- a. Perm?,m0,conv_55
+,out of sight,ADELE,KAREN,0.122,25,205,"You didn't visit him in prison. He didn't want me to. Why not? I don't know.  He was different after he was sentenced, looking at thirty years.  Said it depressed him every time the younger cons called him an old timer. But you spoke to him on the phone. He'd call every once in a while. He called the day he escaped. He did?  I don't remember.  Did he say about me?  In the trunk? He said he wished the two of you could start over, live a normal life. Huh.  Problem is, Jack's idea of a normal life is robbing banks.  It's all he's ever done. Did you know that when you married him? He said he was a card player.  I could live with that.  I never knew he robbed banks till he got busted with that car that caught fire -- if you can imagine something like that happening, comes out of the bank and the car's on fire. I did go see him in jail to tell him I was filing for divorce.  He said, ""Okay.""  Jack's so easy going.  He was fun, but never what you'd call a real husband.",m467,conv_63893
+,sister act,MARY PATRICK,MARY ROBERT,0.3333,4,12,He's not like other guys. He's decent. He's kind.,m516,conv_70112
+,new nightmare,DR. HEFNER,HEATHER,0.1282,5,39,"Ms. Langenkamp.  I'm afraid there are no evening visiting hours in Intensive Care. Is he all right? Dylan?  He's holding well.  Earlier he had some problems, he's in an oxygen tent just now... Oh my God...",m227,conv_31927
+,wild things,KELLY,SANDRA,0.1429,1,7,What? I was raped.  By Sam Lombardo.,m606,conv_81925
+,the cell,CATHERINE,MIRIAM,0.2,1,5,He hates me. Lucien Baines?,m557,conv_75556
+,panic room,MEG,SARAH,0.25,1,4,Call Dad! On it!,m155,conv_22264
+,legally blonde,ELLE,MARGOT,0.1081,4,37,I don't know! Everything was normal at first and then he said he needed someone more --  Serious! Serious?! Who the hell does he think he is? You're the most popular month on the USC calendar!,m117,conv_16458
+,superman iv: the quest for peace,LACY,LOIS,0.125,1,8,What's he going to say? Something . . . wonderful.,m543,conv_73988
+,the haunting,NELL,THEO,0.1579,6,38,"David? Maybe he never came in.  If he'd come in, he would have left his bags at the door, right?  Or maybe he got here early, and went for a walk, and fell.  Maybe he's outside.",m551,conv_74946
+,slither,KYLIE,STARLA,0.2,3,15,Now he's here. He went in Mr. Grant. Through a wound on his stomach?,m184,conv_26019
+,intolerable cruelty,RAMONA,SARAH,0.2857,4,14,George was so impressed he hired him when he divorced his second. Muriel Rumsey.,m102,conv_14291
+,a nightmare on elm street 3: dream warriors,NANCY,TARYN,0.1778,8,45,"Who is he? Freddy Krueger.  He was a child murderer before he died.  After he died, he became ...something worse.  Six years ago Freddy killed my friends. He almost killed me.  I thought I got rid of him -- but I guess he was too strong.",m461,conv_63092
+,ghost world,ENID,REBECCA,0.1,2,20,"I'll bet he never jerks off... Yeah, he's beyond human stuff like that. Should we leave a note?",m72,conv_10070
+,intolerable cruelty,MARYLIN,RAMONA,0.1053,2,19,"Well. He said to ""make the house mine."" Oh boy. If he only knew. Yeah. I guess. You know --",m102,conv_14170
+,what lies beneath,CLAIRE,JODY,0.1404,8,57,"But he acted like he'd never heard of it. Did he say that? Jody he was lying. What if he was?  Do you think he wanted to bring that up again just when you're trying to make a new start? I guess not. He's trying to put it behind him, Claire. You should too.",m601,conv_81329
+,the birds,ANNIE,MELANIE,0.1176,2,17,"Is anyone there? Look. Ohhh. Oh, the poor thing. He probably lost his way in the dark.",m208,conv_29305
+,sleepy hollow,KATRINA,LADY VAN TASSEL,0.2,2,10,"Lay still, Ichabod.  Do not move. Doctor, he is awake.",m517,conv_70275
+,domino,DOMINO,EDNA,0.1429,1,7,"HE'S STILL ALIVE, EDNA! PROVE IT!",m325,conv_45730
+,titanic,ROSE,RUTH,0.1,1,10,"Mother, may I introduce Jack Dawson. Charmed, I'm sure.",m574,conv_77834
+,star trek: generations,B'ETOR,LURSA,0.1875,3,16,I thought he was the Chief Engineer. He is. Then when is he going to Engineering?,m191,conv_26778
+,buffy the vampire slayer,BUFFY,NICOLE,0.1429,1,7,I haven't seen him tonight. Oh.,m287,conv_40466
+,it happened one night,ANDREWS,ELLIE,0.1176,6,51,Looks like that was his only interest in me. The reward. I'm sorry you read it. Are you going to see him? I suppose so. Certainly!  Pay him off. He's entitled to it. He did an excellent job. Kept me thoroughly entertained. It's worth every penny he gets.,m103,conv_14316
+,bound,CORKY,VIOLET,0.25,2,8,What if he sees you? He won't.,m281,conv_39593
+,jackie brown,JACKIE,MELANIE,0.125,4,32,He killed a guy who works for him the other day. Beaumont Livingston? You already knew that? Kinda. So tell me. Having all that money in your flight bag -- Is it tempting?,m105,conv_14774
+,superman iv: the quest for peace,LACY,LOIS,0.1205,10,83,"I know I'm not exactly a Girl Scout but . . . maybe if I show him I'm trying . . . he'll like me. Who? Clark. He's late again.  I can't figure him out. That's because there's nothing to figure out. Now will you please pay attention. I'm not through insulting your father. Lois, have you ever fallen for a guy and he's not like other guys . . . he's different. It's like you come from two different worlds.",m543,conv_73986
+,buffy the vampire slayer,BUFFY,NICOLE,0.2222,4,18,"Hi, guys. Hi. Have you guys seen Jeffrey?  The limo never showed, I thought he might be here.",m287,conv_40465
+,hannah and her sisters,HOLLY,LEE,0.6667,2,3,Dad... Oh... Dad!,m380,conv_53141
+,ghost world,ENID,REBECCA,0.1071,3,28,"Oh my god, look! Is Stacy Himmler going out with Rod Harbaugh? How perfect. He better watch out or he'll get AIDS when he date-rapes her.",m72,conv_10021
+,fast times at ridgemont high,LINDA,STACY,0.1071,3,28,I hear some surfer pulled a knife on Mr. Hand this morning. No way! He just called him a dick. God. People exaggerate so much at this school.,m59,conv_8211
+,fast times at ridgemont high,LINDA,STACY,0.1333,2,15,"God, he hardly even talks anymore. I know. He hates to have to wear uniforms.",m59,conv_8227
+,a nightmare on elm street 3: dream warriors,KRISTEN,NANCY,0.2,2,10,Nancy! He's too strong!  He was never this strong!,m461,conv_63052
+,the birds,LYDIA,MELANIE,0.1333,6,45,"Where's Mitch? Al Malone wanted him out at the Fawcett farm. Why? Didn't Al believe my story? He was calling from the farm, Mrs. Brenner. Then he saw. He must have. He sent for the Santa Rosa police. What good will they do?",m208,conv_29364

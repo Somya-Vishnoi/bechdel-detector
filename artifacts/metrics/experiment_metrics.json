@@ -1,0 +1,958 @@
+{
+  "regression": {
+    "dialogue_share_regression": {
+      "LinearRegression": {
+        "mae": 0.10848101163100383,
+        "mse": 0.020604730382727317,
+        "rmse": 0.14354347906724052,
+        "r2": 0.30189624916936286,
+        "n_samples": 404,
+        "features_used": [
+          "year",
+          "imdb_rating",
+          "log_imdb_votes",
+          "female_char_share",
+          "genre_action",
+          "genre_adventure",
+          "genre_animation",
+          "genre_biography",
+          "genre_comedy",
+          "genre_crime",
+          "genre_drama",
+          "genre_fantasy",
+          "genre_horror",
+          "genre_mystery",
+          "genre_romance",
+          "genre_sci-fi",
+          "genre_thriller"
+        ]
+      },
+      "Ridge": {
+        "mae": 0.10846729528128958,
+        "mse": 0.02058875831259734,
+        "rmse": 0.14348783332602572,
+        "r2": 0.3024373949091592,
+        "n_samples": 404,
+        "features_used": [
+          "year",
+          "imdb_rating",
+          "log_imdb_votes",
+          "female_char_share",
+          "genre_action",
+          "genre_adventure",
+          "genre_animation",
+          "genre_biography",
+          "genre_comedy",
+          "genre_crime",
+          "genre_drama",
+          "genre_fantasy",
+          "genre_horror",
+          "genre_mystery",
+          "genre_romance",
+          "genre_sci-fi",
+          "genre_thriller"
+        ]
+      },
+      "RandomForestRegressor": {
+        "mae": 0.10629402076300751,
+        "mse": 0.020668321267595657,
+        "rmse": 0.14376481234153113,
+        "r2": 0.2997417421983596,
+        "n_samples": 404,
+        "features_used": [
+          "year",
+          "imdb_rating",
+          "log_imdb_votes",
+          "female_char_share",
+          "genre_action",
+          "genre_adventure",
+          "genre_animation",
+          "genre_biography",
+          "genre_comedy",
+          "genre_crime",
+          "genre_drama",
+          "genre_fantasy",
+          "genre_horror",
+          "genre_mystery",
+          "genre_romance",
+          "genre_sci-fi",
+          "genre_thriller"
+        ]
+      },
+      "GradientBoostingRegressor": {
+        "mae": 0.10885088641670553,
+        "mse": 0.020666263741528856,
+        "rmse": 0.14375765628838297,
+        "r2": 0.2998114527278344,
+        "n_samples": 404,
+        "features_used": [
+          "year",
+          "imdb_rating",
+          "log_imdb_votes",
+          "female_char_share",
+          "genre_action",
+          "genre_adventure",
+          "genre_animation",
+          "genre_biography",
+          "genre_comedy",
+          "genre_crime",
+          "genre_drama",
+          "genre_fantasy",
+          "genre_horror",
+          "genre_mystery",
+          "genre_romance",
+          "genre_sci-fi",
+          "genre_thriller"
+        ]
+      }
+    },
+    "yearly_trend_regression": {
+      "yearly_data": [
+        {
+          "year": 1931,
+          "total_films": 24,
+          "pass_rate": 0.5416666666666666,
+          "year_sq": 3728761
+        },
+        {
+          "year": 1932,
+          "total_films": 23,
+          "pass_rate": 0.34782608695652173,
+          "year_sq": 3732624
+        },
+        {
+          "year": 1933,
+          "total_films": 19,
+          "pass_rate": 0.6842105263157895,
+          "year_sq": 3736489
+        },
+        {
+          "year": 1934,
+          "total_films": 18,
+          "pass_rate": 0.5,
+          "year_sq": 3740356
+        },
+        {
+          "year": 1936,
+          "total_films": 27,
+          "pass_rate": 0.5925925925925926,
+          "year_sq": 3748096
+        },
+        {
+          "year": 1937,
+          "total_films": 20,
+          "pass_rate": 0.4,
+          "year_sq": 3751969
+        },
+        {
+          "year": 1938,
+          "total_films": 15,
+          "pass_rate": 0.3333333333333333,
+          "year_sq": 3755844
+        },
+        {
+          "year": 1939,
+          "total_films": 30,
+          "pass_rate": 0.43333333333333335,
+          "year_sq": 3759721
+        },
+        {
+          "year": 1940,
+          "total_films": 29,
+          "pass_rate": 0.5172413793103449,
+          "year_sq": 3763600
+        },
+        {
+          "year": 1941,
+          "total_films": 22,
+          "pass_rate": 0.4090909090909091,
+          "year_sq": 3767481
+        },
+        {
+          "year": 1942,
+          "total_films": 20,
+          "pass_rate": 0.4,
+          "year_sq": 3771364
+        },
+        {
+          "year": 1943,
+          "total_films": 23,
+          "pass_rate": 0.5652173913043478,
+          "year_sq": 3775249
+        },
+        {
+          "year": 1944,
+          "total_films": 18,
+          "pass_rate": 0.6666666666666666,
+          "year_sq": 3779136
+        },
+        {
+          "year": 1945,
+          "total_films": 21,
+          "pass_rate": 0.6190476190476191,
+          "year_sq": 3783025
+        },
+        {
+          "year": 1946,
+          "total_films": 24,
+          "pass_rate": 0.375,
+          "year_sq": 3786916
+        },
+        {
+          "year": 1947,
+          "total_films": 18,
+          "pass_rate": 0.4444444444444444,
+          "year_sq": 3790809
+        },
+        {
+          "year": 1948,
+          "total_films": 23,
+          "pass_rate": 0.30434782608695654,
+          "year_sq": 3794704
+        },
+        {
+          "year": 1949,
+          "total_films": 18,
+          "pass_rate": 0.5555555555555556,
+          "year_sq": 3798601
+        },
+        {
+          "year": 1950,
+          "total_films": 18,
+          "pass_rate": 0.5555555555555556,
+          "year_sq": 3802500
+        },
+        {
+          "year": 1951,
+          "total_films": 18,
+          "pass_rate": 0.6666666666666666,
+          "year_sq": 3806401
+        },
+        {
+          "year": 1953,
+          "total_films": 32,
+          "pass_rate": 0.4375,
+          "year_sq": 3814209
+        },
+        {
+          "year": 1954,
+          "total_films": 29,
+          "pass_rate": 0.41379310344827586,
+          "year_sq": 3818116
+        },
+        {
+          "year": 1955,
+          "total_films": 31,
+          "pass_rate": 0.5483870967741935,
+          "year_sq": 3822025
+        },
+        {
+          "year": 1956,
+          "total_films": 30,
+          "pass_rate": 0.4666666666666667,
+          "year_sq": 3825936
+        },
+        {
+          "year": 1957,
+          "total_films": 35,
+          "pass_rate": 0.34285714285714286,
+          "year_sq": 3829849
+        },
+        {
+          "year": 1958,
+          "total_films": 28,
+          "pass_rate": 0.4642857142857143,
+          "year_sq": 3833764
+        },
+        {
+          "year": 1959,
+          "total_films": 28,
+          "pass_rate": 0.6071428571428571,
+          "year_sq": 3837681
+        },
+        {
+          "year": 1960,
+          "total_films": 30,
+          "pass_rate": 0.5666666666666667,
+          "year_sq": 3841600
+        },
+        {
+          "year": 1961,
+          "total_films": 30,
+          "pass_rate": 0.6333333333333333,
+          "year_sq": 3845521
+        },
+        {
+          "year": 1962,
+          "total_films": 31,
+          "pass_rate": 0.5161290322580645,
+          "year_sq": 3849444
+        },
+        {
+          "year": 1963,
+          "total_films": 36,
+          "pass_rate": 0.4166666666666667,
+          "year_sq": 3853369
+        },
+        {
+          "year": 1964,
+          "total_films": 41,
+          "pass_rate": 0.3902439024390244,
+          "year_sq": 3857296
+        },
+        {
+          "year": 1965,
+          "total_films": 26,
+          "pass_rate": 0.5384615384615384,
+          "year_sq": 3861225
+        },
+        {
+          "year": 1966,
+          "total_films": 38,
+          "pass_rate": 0.2894736842105263,
+          "year_sq": 3865156
+        },
+        {
+          "year": 1967,
+          "total_films": 35,
+          "pass_rate": 0.4857142857142857,
+          "year_sq": 3869089
+        },
+        {
+          "year": 1968,
+          "total_films": 36,
+          "pass_rate": 0.3888888888888889,
+          "year_sq": 3873024
+        },
+        {
+          "year": 1969,
+          "total_films": 27,
+          "pass_rate": 0.2962962962962963,
+          "year_sq": 3876961
+        },
+        {
+          "year": 1970,
+          "total_films": 32,
+          "pass_rate": 0.5,
+          "year_sq": 3880900
+        },
+        {
+          "year": 1971,
+          "total_films": 45,
+          "pass_rate": 0.4444444444444444,
+          "year_sq": 3884841
+        },
+        {
+          "year": 1972,
+          "total_films": 36,
+          "pass_rate": 0.5277777777777778,
+          "year_sq": 3888784
+        },
+        {
+          "year": 1973,
+          "total_films": 38,
+          "pass_rate": 0.47368421052631576,
+          "year_sq": 3892729
+        },
+        {
+          "year": 1974,
+          "total_films": 35,
+          "pass_rate": 0.45714285714285713,
+          "year_sq": 3896676
+        },
+        {
+          "year": 1975,
+          "total_films": 31,
+          "pass_rate": 0.6451612903225806,
+          "year_sq": 3900625
+        },
+        {
+          "year": 1976,
+          "total_films": 31,
+          "pass_rate": 0.3870967741935484,
+          "year_sq": 3904576
+        },
+        {
+          "year": 1977,
+          "total_films": 37,
+          "pass_rate": 0.4594594594594595,
+          "year_sq": 3908529
+        },
+        {
+          "year": 1978,
+          "total_films": 34,
+          "pass_rate": 0.4117647058823529,
+          "year_sq": 3912484
+        },
+        {
+          "year": 1979,
+          "total_films": 36,
+          "pass_rate": 0.4444444444444444,
+          "year_sq": 3916441
+        },
+        {
+          "year": 1980,
+          "total_films": 39,
+          "pass_rate": 0.5128205128205128,
+          "year_sq": 3920400
+        },
+        {
+          "year": 1981,
+          "total_films": 50,
+          "pass_rate": 0.5,
+          "year_sq": 3924361
+        },
+        {
+          "year": 1982,
+          "total_films": 55,
+          "pass_rate": 0.5272727272727272,
+          "year_sq": 3928324
+        },
+        {
+          "year": 1983,
+          "total_films": 42,
+          "pass_rate": 0.42857142857142855,
+          "year_sq": 3932289
+        },
+        {
+          "year": 1984,
+          "total_films": 62,
+          "pass_rate": 0.532258064516129,
+          "year_sq": 3936256
+        },
+        {
+          "year": 1985,
+          "total_films": 75,
+          "pass_rate": 0.52,
+          "year_sq": 3940225
+        },
+        {
+          "year": 1986,
+          "total_films": 62,
+          "pass_rate": 0.4838709677419355,
+          "year_sq": 3944196
+        },
+        {
+          "year": 1987,
+          "total_films": 69,
+          "pass_rate": 0.6521739130434783,
+          "year_sq": 3948169
+        },
+        {
+          "year": 1988,
+          "total_films": 69,
+          "pass_rate": 0.5942028985507246,
+          "year_sq": 3952144
+        },
+        {
+          "year": 1989,
+          "total_films": 66,
+          "pass_rate": 0.5757575757575758,
+          "year_sq": 3956121
+        },
+        {
+          "year": 1990,
+          "total_films": 71,
+          "pass_rate": 0.5633802816901409,
+          "year_sq": 3960100
+        },
+        {
+          "year": 1991,
+          "total_films": 76,
+          "pass_rate": 0.5657894736842105,
+          "year_sq": 3964081
+        },
+        {
+          "year": 1992,
+          "total_films": 75,
+          "pass_rate": 0.49333333333333335,
+          "year_sq": 3968064
+        },
+        {
+          "year": 1993,
+          "total_films": 97,
+          "pass_rate": 0.5670103092783505,
+          "year_sq": 3972049
+        },
+        {
+          "year": 1994,
+          "total_films": 101,
+          "pass_rate": 0.5445544554455446,
+          "year_sq": 3976036
+        },
+        {
+          "year": 1995,
+          "total_films": 107,
+          "pass_rate": 0.6261682242990654,
+          "year_sq": 3980025
+        },
+        {
+          "year": 1996,
+          "total_films": 118,
+          "pass_rate": 0.6186440677966102,
+          "year_sq": 3984016
+        },
+        {
+          "year": 1997,
+          "total_films": 108,
+          "pass_rate": 0.5740740740740741,
+          "year_sq": 3988009
+        },
+        {
+          "year": 1998,
+          "total_films": 134,
+          "pass_rate": 0.5597014925373134,
+          "year_sq": 3992004
+        },
+        {
+          "year": 1999,
+          "total_films": 127,
+          "pass_rate": 0.6220472440944882,
+          "year_sq": 3996001
+        },
+        {
+          "year": 2000,
+          "total_films": 146,
+          "pass_rate": 0.6095890410958904,
+          "year_sq": 4000000
+        },
+        {
+          "year": 2001,
+          "total_films": 168,
+          "pass_rate": 0.6369047619047619,
+          "year_sq": 4004001
+        },
+        {
+          "year": 2002,
+          "total_films": 174,
+          "pass_rate": 0.5459770114942529,
+          "year_sq": 4008004
+        },
+        {
+          "year": 2003,
+          "total_films": 154,
+          "pass_rate": 0.6233766233766234,
+          "year_sq": 4012009
+        },
+        {
+          "year": 2004,
+          "total_films": 194,
+          "pass_rate": 0.6237113402061856,
+          "year_sq": 4016016
+        },
+        {
+          "year": 2005,
+          "total_films": 207,
+          "pass_rate": 0.6231884057971014,
+          "year_sq": 4020025
+        },
+        {
+          "year": 2006,
+          "total_films": 248,
+          "pass_rate": 0.6330645161290323,
+          "year_sq": 4024036
+        },
+        {
+          "year": 2007,
+          "total_films": 252,
+          "pass_rate": 0.623015873015873,
+          "year_sq": 4028049
+        },
+        {
+          "year": 2008,
+          "total_films": 261,
+          "pass_rate": 0.5938697318007663,
+          "year_sq": 4032064
+        },
+        {
+          "year": 2009,
+          "total_films": 339,
+          "pass_rate": 0.5634218289085545,
+          "year_sq": 4036081
+        },
+        {
+          "year": 2010,
+          "total_films": 344,
+          "pass_rate": 0.5959302325581395,
+          "year_sq": 4040100
+        },
+        {
+          "year": 2011,
+          "total_films": 359,
+          "pass_rate": 0.6350974930362117,
+          "year_sq": 4044121
+        },
+        {
+          "year": 2012,
+          "total_films": 346,
+          "pass_rate": 0.638728323699422,
+          "year_sq": 4048144
+        },
+        {
+          "year": 2013,
+          "total_films": 403,
+          "pass_rate": 0.6600496277915633,
+          "year_sq": 4052169
+        },
+        {
+          "year": 2014,
+          "total_films": 382,
+          "pass_rate": 0.5968586387434555,
+          "year_sq": 4056196
+        },
+        {
+          "year": 2015,
+          "total_films": 319,
+          "pass_rate": 0.6238244514106583,
+          "year_sq": 4060225
+        },
+        {
+          "year": 2016,
+          "total_films": 302,
+          "pass_rate": 0.6390728476821192,
+          "year_sq": 4064256
+        },
+        {
+          "year": 2017,
+          "total_films": 238,
+          "pass_rate": 0.6848739495798319,
+          "year_sq": 4068289
+        },
+        {
+          "year": 2018,
+          "total_films": 172,
+          "pass_rate": 0.6569767441860465,
+          "year_sq": 4072324
+        },
+        {
+          "year": 2019,
+          "total_films": 55,
+          "pass_rate": 0.6909090909090909,
+          "year_sq": 4076361
+        }
+      ],
+      "models": {
+        "LinearRegression": {
+          "mae": 0.06309718096531233,
+          "mse": 0.006848251775009725,
+          "rmse": 0.08275416469888222,
+          "r2": 0.32941262497474455,
+          "n_years": 87
+        },
+        "Ridge": {
+          "mae": 0.06875110586568797,
+          "mse": 0.007793216638951169,
+          "rmse": 0.08827919709054433,
+          "r2": 0.23688076013969472,
+          "n_years": 87
+        },
+        "RandomForestRegressor": {
+          "mae": 0.06687990181036506,
+          "mse": 0.007332982536441503,
+          "rmse": 0.08563283562069811,
+          "r2": 0.2819473244014361,
+          "n_years": 87
+        },
+        "GradientBoostingRegressor": {
+          "mae": 0.06785738027979918,
+          "mse": 0.007567484149841105,
+          "rmse": 0.08699128778125488,
+          "r2": 0.2589847017445607,
+          "n_years": 87
+        }
+      }
+    }
+  },
+  "classification_summary": [
+    {
+      "experiment": "Exp3_Metadata_Plus_Dialogue",
+      "model": "NaiveBayes",
+      "feature_set": "dialogue+metadata",
+      "cv_accuracy": 0.7376,
+      "cv_f1": 0.6919,
+      "cv_pr_auc": 0.7833,
+      "cv_roc_auc": 0.7841,
+      "cv_precision": 0.758,
+      "cv_recall": 0.6364,
+      "cv_cohen_kappa": 0.4664,
+      "temp_accuracy": 0.6167,
+      "temp_f1": 0.566,
+      "temp_pr_auc": 0.7787,
+      "temp_roc_auc": 0.7033,
+      "temp_recall": 0.5
+    },
+    {
+      "experiment": "Exp3_Metadata_Plus_Dialogue",
+      "model": "LogisticRegression",
+      "feature_set": "dialogue+metadata",
+      "cv_accuracy": 0.7203,
+      "cv_f1": 0.6887,
+      "cv_pr_auc": 0.7858,
+      "cv_roc_auc": 0.766,
+      "cv_precision": 0.7102,
+      "cv_recall": 0.6684,
+      "cv_cohen_kappa": 0.4352,
+      "temp_accuracy": 0.5667,
+      "temp_f1": 0.5185,
+      "temp_pr_auc": 0.7741,
+      "temp_roc_auc": 0.7022,
+      "temp_recall": 0.4667
+    },
+    {
+      "experiment": "Exp2_Metadata_Only",
+      "model": "LogisticRegression",
+      "feature_set": "metadata",
+      "cv_accuracy": 0.6931,
+      "cv_f1": 0.6804,
+      "cv_pr_auc": 0.7111,
+      "cv_roc_auc": 0.7398,
+      "cv_precision": 0.6567,
+      "cv_recall": 0.7059,
+      "cv_cohen_kappa": 0.3859,
+      "temp_accuracy": 0.6667,
+      "temp_f1": 0.6667,
+      "temp_pr_auc": 0.7642,
+      "temp_roc_auc": 0.7044,
+      "temp_recall": 0.6667
+    },
+    {
+      "experiment": "Exp3_Metadata_Plus_Dialogue",
+      "model": "RandomForest",
+      "feature_set": "dialogue+metadata",
+      "cv_accuracy": 0.7302,
+      "cv_f1": 0.6785,
+      "cv_pr_auc": 0.7885,
+      "cv_roc_auc": 0.7892,
+      "cv_precision": 0.7566,
+      "cv_recall": 0.615,
+      "cv_cohen_kappa": 0.4503,
+      "temp_accuracy": 0.65,
+      "temp_f1": 0.5714,
+      "temp_pr_auc": 0.7768,
+      "temp_roc_auc": 0.7022,
+      "temp_recall": 0.4667
+    },
+    {
+      "experiment": "Exp3_Metadata_Plus_Dialogue",
+      "model": "SVM",
+      "feature_set": "dialogue+metadata",
+      "cv_accuracy": 0.7277,
+      "cv_f1": 0.6784,
+      "cv_pr_auc": 0.7618,
+      "cv_roc_auc": 0.7776,
+      "cv_precision": 0.7484,
+      "cv_recall": 0.6203,
+      "cv_cohen_kappa": 0.4459,
+      "temp_accuracy": 0.5833,
+      "temp_f1": 0.5455,
+      "temp_pr_auc": 0.7343,
+      "temp_roc_auc": 0.6611,
+      "temp_recall": 0.5
+    },
+    {
+      "experiment": "Exp3_Metadata_Plus_Dialogue",
+      "model": "KNN",
+      "feature_set": "dialogue+metadata",
+      "cv_accuracy": 0.7104,
+      "cv_f1": 0.6648,
+      "cv_pr_auc": 0.7467,
+      "cv_roc_auc": 0.7692,
+      "cv_precision": 0.716,
+      "cv_recall": 0.6203,
+      "cv_cohen_kappa": 0.4121,
+      "temp_accuracy": 0.5833,
+      "temp_f1": 0.5283,
+      "temp_pr_auc": 0.7076,
+      "temp_roc_auc": 0.6583,
+      "temp_recall": 0.4667
+    },
+    {
+      "experiment": "Exp3_Metadata_Plus_Dialogue",
+      "model": "HistGradientBoosting",
+      "feature_set": "dialogue+metadata",
+      "cv_accuracy": 0.698,
+      "cv_f1": 0.663,
+      "cv_pr_auc": 0.7701,
+      "cv_roc_auc": 0.7583,
+      "cv_precision": 0.6857,
+      "cv_recall": 0.6417,
+      "cv_cohen_kappa": 0.39,
+      "temp_accuracy": 0.6333,
+      "temp_f1": 0.5926,
+      "temp_pr_auc": 0.7924,
+      "temp_roc_auc": 0.7067,
+      "temp_recall": 0.5333
+    },
+    {
+      "experiment": "Exp3_Metadata_Plus_Dialogue",
+      "model": "DecisionTree",
+      "feature_set": "dialogue+metadata",
+      "cv_accuracy": 0.6856,
+      "cv_f1": 0.654,
+      "cv_pr_auc": 0.7227,
+      "cv_roc_auc": 0.7413,
+      "cv_precision": 0.6667,
+      "cv_recall": 0.6417,
+      "cv_cohen_kappa": 0.3662,
+      "temp_accuracy": 0.65,
+      "temp_f1": 0.6038,
+      "temp_pr_auc": 0.6936,
+      "temp_roc_auc": 0.6978,
+      "temp_recall": 0.5333
+    },
+    {
+      "experiment": "Exp2_Metadata_Only",
+      "model": "RandomForest",
+      "feature_set": "metadata",
+      "cv_accuracy": 0.6757,
+      "cv_f1": 0.6525,
+      "cv_pr_auc": 0.6909,
+      "cv_roc_auc": 0.735,
+      "cv_precision": 0.6474,
+      "cv_recall": 0.6578,
+      "cv_cohen_kappa": 0.3486,
+      "temp_accuracy": 0.6333,
+      "temp_f1": 0.56,
+      "temp_pr_auc": 0.6929,
+      "temp_roc_auc": 0.6728,
+      "temp_recall": 0.4667
+    },
+    {
+      "experiment": "Exp2_Metadata_Only",
+      "model": "DecisionTree",
+      "feature_set": "metadata",
+      "cv_accuracy": 0.6683,
+      "cv_f1": 0.6492,
+      "cv_pr_auc": 0.623,
+      "cv_roc_auc": 0.696,
+      "cv_precision": 0.6359,
+      "cv_recall": 0.6631,
+      "cv_cohen_kappa": 0.3349,
+      "temp_accuracy": 0.7,
+      "temp_f1": 0.7,
+      "temp_pr_auc": 0.7392,
+      "temp_roc_auc": 0.7344,
+      "temp_recall": 0.7
+    },
+    {
+      "experiment": "Exp2_Metadata_Only",
+      "model": "HistGradientBoosting",
+      "feature_set": "metadata",
+      "cv_accuracy": 0.6634,
+      "cv_f1": 0.6364,
+      "cv_pr_auc": 0.6807,
+      "cv_roc_auc": 0.7141,
+      "cv_precision": 0.6364,
+      "cv_recall": 0.6364,
+      "cv_cohen_kappa": 0.323,
+      "temp_accuracy": 0.65,
+      "temp_f1": 0.5532,
+      "temp_pr_auc": 0.6522,
+      "temp_roc_auc": 0.625,
+      "temp_recall": 0.4333
+    },
+    {
+      "experiment": "Exp2_Metadata_Only",
+      "model": "SVM",
+      "feature_set": "metadata",
+      "cv_accuracy": 0.6559,
+      "cv_f1": 0.6233,
+      "cv_pr_auc": 0.6797,
+      "cv_roc_auc": 0.7196,
+      "cv_precision": 0.6319,
+      "cv_recall": 0.615,
+      "cv_cohen_kappa": 0.3068,
+      "temp_accuracy": 0.6167,
+      "temp_f1": 0.6349,
+      "temp_pr_auc": 0.717,
+      "temp_roc_auc": 0.6789,
+      "temp_recall": 0.6667
+    },
+    {
+      "experiment": "Exp2_Metadata_Only",
+      "model": "NaiveBayes",
+      "feature_set": "metadata",
+      "cv_accuracy": 0.6337,
+      "cv_f1": 0.6064,
+      "cv_pr_auc": 0.6436,
+      "cv_roc_auc": 0.6727,
+      "cv_precision": 0.6032,
+      "cv_recall": 0.6096,
+      "cv_cohen_kappa": 0.2638,
+      "temp_accuracy": 0.65,
+      "temp_f1": 0.6316,
+      "temp_pr_auc": 0.7118,
+      "temp_roc_auc": 0.6789,
+      "temp_recall": 0.6
+    },
+    {
+      "experiment": "Exp2_Metadata_Only",
+      "model": "KNN",
+      "feature_set": "metadata",
+      "cv_accuracy": 0.6411,
+      "cv_f1": 0.5938,
+      "cv_pr_auc": 0.5938,
+      "cv_roc_auc": 0.6749,
+      "cv_precision": 0.6235,
+      "cv_recall": 0.5668,
+      "cv_cohen_kappa": 0.2736,
+      "temp_accuracy": 0.5167,
+      "temp_f1": 0.4727,
+      "temp_pr_auc": 0.5181,
+      "temp_roc_auc": 0.53,
+      "temp_recall": 0.4333
+    },
+    {
+      "experiment": "Exp3_Metadata_Plus_Dialogue",
+      "model": "MajorityBaseline",
+      "feature_set": "dialogue+metadata",
+      "cv_accuracy": 0.5371,
+      "cv_f1": 0.0,
+      "cv_pr_auc": 0.4596,
+      "cv_roc_auc": 0.494,
+      "cv_precision": 0.0,
+      "cv_recall": 0.0,
+      "cv_cohen_kappa": 0.0,
+      "temp_accuracy": 0.5,
+      "temp_f1": 0.0,
+      "temp_pr_auc": 0.5,
+      "temp_roc_auc": 0.5,
+      "temp_recall": 0.0
+    },
+    {
+      "experiment": "Exp2_Metadata_Only",
+      "model": "MajorityBaseline",
+      "feature_set": "metadata",
+      "cv_accuracy": 0.5371,
+      "cv_f1": 0.0,
+      "cv_pr_auc": 0.4596,
+      "cv_roc_auc": 0.494,
+      "cv_precision": 0.0,
+      "cv_recall": 0.0,
+      "cv_cohen_kappa": 0.0,
+      "temp_accuracy": 0.5,
+      "temp_f1": 0.0,
+      "temp_pr_auc": 0.5,
+      "temp_roc_auc": 0.5,
+      "temp_recall": 0.0
+    },
+    {
+      "experiment": "Exp1_Baseline",
+      "model": "MajorityBaseline",
+      "feature_set": "none",
+      "cv_accuracy": 0.5371,
+      "cv_f1": 0.0,
+      "cv_pr_auc": 0.4596,
+      "cv_roc_auc": 0.494,
+      "cv_precision": 0.0,
+      "cv_recall": 0.0,
+      "cv_cohen_kappa": 0.0,
+      "temp_accuracy": 0.5,
+      "temp_f1": 0.0,
+      "temp_pr_auc": 0.5,
+      "temp_roc_auc": 0.5,
+      "temp_recall": 0.0
+    }
+  ],
+  "best_model_key": "Exp3_Metadata_Plus_Dialogue__NaiveBayes"
+}

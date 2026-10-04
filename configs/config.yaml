@@ -1,0 +1,81 @@
+# Bechdel Test Detector Configuration
+seed: 42
+
+paths:
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
+  artifacts_dir: "artifacts"
+  reports_dir: "reports"
+  figures_dir: "reports/figures"
+  bechdel_raw_file: "data/raw/bechdel_movies.json"
+  cornell_raw_dir: "data/raw/cornell"
+  cornell_zip_path: "data/raw/cornell_movie_dialogs_corpus.zip"
+  matched_tier2_file: "data/processed/matched_tier2_movies.parquet"
+  tier1_file: "data/processed/tier1_bechdel_movies.parquet"
+  flagged_conv_file: "reports/flagged_conversations.csv"
+  handcheck_sample_file: "reports/handcheck_sample.csv"
+  data_loss_file: "reports/data_loss.md"
+  report_file: "reports/REPORT.md"
+  error_analysis_file: "reports/error_analysis_top20.csv"
+
+data_urls:
+  bechdel_api: "http://bechdeltest.com/api/v1/getAllMovies"
+  bechdel_archive_fallback: "https://web.archive.org/web/20241201000000id_/http://bechdeltest.com/api/v1/getAllMovies"
+  bechdel_index_fallback: "https://bechdeltest.com/search/index.json"
+  cornell_corpus_zip: "http://www.cs.cornell.edu/~cristian/data/cornell_movie_dialogs_corpus.zip"
+
+matching:
+  year_tolerance: 1
+
+detector:
+  male_pronouns:
+    - "he"
+    - "him"
+    - "his"
+    - "himself"
+  male_relations:
+    - "boyfriend"
+    - "boyfriends"
+    - "husband"
+    - "husbands"
+    - "father"
+    - "fathers"
+    - "dad"
+    - "dads"
+    - "brother"
+    - "brothers"
+    - "son"
+    - "sons"
+    - "man"
+    - "men"
+    - "guy"
+    - "guys"
+    - "male"
+    - "males"
+    - "uncle"
+    - "uncles"
+    - "nephew"
+    - "nephews"
+    - "king"
+    - "prince"
+    - "groom"
+    - "fiance"
+    - "fiancé"
+    - "stepfather"
+    - "ex-boyfriend"
+  handcheck_sample_size: 50
+
+splits:
+  n_splits: 5
+  test_size: 0.2
+  temporal_split_year: 2000
+
+models:
+  classification_models:
+    - "LogisticRegression"
+    - "KNN"
+    - "GaussianNB"
+    - "DecisionTree"
+    - "SVC"
+    - "RandomForest"
+    - "HistGradientBoosting"

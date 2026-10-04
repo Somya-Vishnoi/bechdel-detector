@@ -1,0 +1,763 @@
+{
+  "detector_evaluation": {
+    "overall": {
+      "overall_accuracy": 0.7400990099009901,
+      "overall_precision": 0.75,
+      "overall_recall": 0.6577540106951871,
+      "overall_f1": 0.7008547008547008,
+      "overall_specificity": 0.8110599078341014,
+      "overall_cohen_kappa": 0.4728339215588805,
+      "overall_tn": 176,
+      "overall_fp": 41,
+      "overall_fn": 64,
+      "overall_tp": 123,
+      "overall_support": 404
+    },
+    "stage_a": {
+      "stage_a_accuracy": 0.7945544554455446,
+      "stage_a_precision": 0.9830508474576272,
+      "stage_a_recall": 0.7880434782608695,
+      "stage_a_f1": 0.8748114630467572,
+      "stage_a_specificity": 0.8611111111111112,
+      "stage_a_cohen_kappa": 0.33903650555862186,
+      "stage_a_tn": 31,
+      "stage_a_fp": 5,
+      "stage_a_fn": 78,
+      "stage_a_tp": 290,
+      "stage_a_support": 404
+    },
+    "stage_b": {
+      "stage_b_accuracy": 0.720108695652174,
+      "stage_b_precision": 0.9263803680981595,
+      "stage_b_recall": 0.6239669421487604,
+      "stage_b_f1": 0.745679012345679,
+      "stage_b_specificity": 0.9047619047619048,
+      "stage_b_cohen_kappa": 0.4596567257797799,
+      "stage_b_tn": 114,
+      "stage_b_fp": 12,
+      "stage_b_fn": 91,
+      "stage_b_tp": 151,
+      "stage_b_support": 368
+    },
+    "stage_c": {
+      "stage_c_accuracy": 0.6198347107438017,
+      "stage_c_precision": 0.8145695364238411,
+      "stage_c_recall": 0.6577540106951871,
+      "stage_c_f1": 0.727810650887574,
+      "stage_c_specificity": 0.4909090909090909,
+      "stage_c_cohen_kappa": 0.12076455256298857,
+      "stage_c_tn": 27,
+      "stage_c_fp": 28,
+      "stage_c_fn": 64,
+      "stage_c_tp": 123,
+      "stage_c_support": 242
+    },
+    "n_films": 404,
+    "total_ff_conversations": 3266
+  },
+  "statistical_tests": {
+    "chi2_decade_tier1": {
+      "factor": "decade",
+      "chi2_statistic": 232.6858552268026,
+      "p_value": 2.4894316790884768e-42,
+      "degrees_of_freedom": 13,
+      "cramers_v": 0.16855554376573892,
+      "significant_at_05": true,
+      "pass_rates_by_group": {
+        "1880": {
+          "count": 1,
+          "mean": 0.0
+        },
+        "1890": {
+          "count": 12,
+          "mean": 0.08333333333333333
+        },
+        "1900": {
+          "count": 42,
+          "mean": 0.0
+        },
+        "1910": {
+          "count": 26,
+          "mean": 0.4230769230769231
+        },
+        "1920": {
+          "count": 81,
+          "mean": 0.20987654320987653
+        },
+        "1930": {
+          "count": 199,
+          "mean": 0.4824120603015075
+        },
+        "1940": {
+          "count": 216,
+          "mean": 0.48148148148148145
+        },
+        "1950": {
+          "count": 262,
+          "mean": 0.48091603053435117
+        },
+        "1960": {
+          "count": 330,
+          "mean": 0.44545454545454544
+        },
+        "1970": {
+          "count": 355,
+          "mean": 0.4732394366197183
+        },
+        "1980": {
+          "count": 589,
+          "mean": 0.5398981324278438
+        },
+        "1990": {
+          "count": 1014,
+          "mean": 0.5779092702169625
+        },
+        "2000": {
+          "count": 2143,
+          "mean": 0.6052263182454503
+        },
+        "2010": {
+          "count": 2920,
+          "mean": 0.6349315068493151
+        }
+      },
+      "disclaimer": "IMPORTANT: All observed associations represent observational correlations and strictly do NOT imply causal relationships. Confounding variables (such as era, studio budget, target audience, and genre conventions) substantially influence both representation and reception."
+    },
+    "chi2_decade_tier2": {
+      "factor": "decade",
+      "chi2_statistic": 12.30229878169664,
+      "p_value": 0.13821711714834287,
+      "degrees_of_freedom": 8,
+      "cramers_v": 0.17450282120401378,
+      "significant_at_05": false,
+      "pass_rates_by_group": {
+        "1920": {
+          "count": 2,
+          "mean": 0.0
+        },
+        "1930": {
+          "count": 10,
+          "mean": 0.6
+        },
+        "1940": {
+          "count": 9,
+          "mean": 0.6666666666666666
+        },
+        "1950": {
+          "count": 15,
+          "mean": 0.4666666666666667
+        },
+        "1960": {
+          "count": 14,
+          "mean": 0.21428571428571427
+        },
+        "1970": {
+          "count": 35,
+          "mean": 0.3142857142857143
+        },
+        "1980": {
+          "count": 79,
+          "mean": 0.5189873417721519
+        },
+        "1990": {
+          "count": 155,
+          "mean": 0.49032258064516127
+        },
+        "2000": {
+          "count": 85,
+          "mean": 0.43529411764705883
+        }
+      },
+      "disclaimer": "IMPORTANT: All observed associations represent observational correlations and strictly do NOT imply causal relationships. Confounding variables (such as era, studio budget, target audience, and genre conventions) substantially influence both representation and reception."
+    },
+    "chi2_genre_tier2": {
+      "factor": "primary_genre",
+      "chi2_statistic": 32.23522843478903,
+      "p_value": 0.0006991687430728335,
+      "degrees_of_freedom": 11,
+      "cramers_v": 0.2824715373148986,
+      "significant_at_05": true,
+      "pass_rates_by_group": {
+        "action": {
+          "count": 109,
+          "mean": 0.3577981651376147
+        },
+        "adventure": {
+          "count": 26,
+          "mean": 0.34615384615384615
+        },
+        "animation": {
+          "count": 3,
+          "mean": 0.3333333333333333
+        },
+        "biography": {
+          "count": 13,
+          "mean": 0.46153846153846156
+        },
+        "comedy": {
+          "count": 77,
+          "mean": 0.6103896103896104
+        },
+        "crime": {
+          "count": 45,
+          "mean": 0.4222222222222222
+        },
+        "drama": {
+          "count": 89,
+          "mean": 0.4157303370786517
+        },
+        "fantasy": {
+          "count": 5,
+          "mean": 1.0
+        },
+        "horror": {
+          "count": 25,
+          "mean": 0.76
+        },
+        "mystery": {
+          "count": 5,
+          "mean": 0.2
+        },
+        "sci-fi": {
+          "count": 1,
+          "mean": 0.0
+        },
+        "thriller": {
+          "count": 6,
+          "mean": 0.6666666666666666
+        }
+      },
+      "disclaimer": "IMPORTANT: All observed associations represent observational correlations and strictly do NOT imply causal relationships. Confounding variables (such as era, studio budget, target audience, and genre conventions) substantially influence both representation and reception."
+    },
+    "ttest_female_line_share": {
+      "variable": "female_line_share",
+      "mean_fail": 0.15261263690073512,
+      "std_fail": 0.12557116384321382,
+      "mean_pass": 0.3099011535731489,
+      "std_pass": 0.18010349824403415,
+      "t_statistic": 10.025793053783264,
+      "p_value_ttest": 8.602322579036537e-21,
+      "mann_whitney_u": 30868.0,
+      "p_value_mwu": 1.4085601917894677e-19,
+      "cohens_d": 1.0264585142764264,
+      "significant_at_05": true,
+      "disclaimer": "IMPORTANT: All observed associations represent observational correlations and strictly do NOT imply causal relationships. Confounding variables (such as era, studio budget, target audience, and genre conventions) substantially influence both representation and reception."
+    },
+    "ttest_imdb_rating": {
+      "variable": "imdb_rating",
+      "mean_fail": 7.309677419354839,
+      "std_fail": 0.994730741111296,
+      "mean_pass": 6.846524064171121,
+      "std_pass": 1.2490969655140918,
+      "t_statistic": -4.077299845975249,
+      "p_value_ttest": 5.631171796916738e-05,
+      "mann_whitney_u": 16016.5,
+      "p_value_mwu": 0.00025947932332453117,
+      "cohens_d": -0.41366675075101517,
+      "significant_at_05": true,
+      "disclaimer": "IMPORTANT: All observed associations represent observational correlations and strictly do NOT imply causal relationships. Confounding variables (such as era, studio budget, target audience, and genre conventions) substantially influence both representation and reception."
+    },
+    "ttest_imdb_votes": {
+      "variable": "log_imdb_votes",
+      "mean_fail": 10.827010215646673,
+      "std_fail": 1.037510956208956,
+      "mean_pass": 10.35811141378225,
+      "std_pass": 1.1068779778103122,
+      "t_statistic": -4.370174843020231,
+      "p_value_ttest": 1.5994778716571643e-05,
+      "mann_whitney_u": 15094.0,
+      "p_value_mwu": 9.032269352364098e-06,
+      "cohens_d": -0.43815553189053125,
+      "significant_at_05": true,
+      "disclaimer": "IMPORTANT: All observed associations represent observational correlations and strictly do NOT imply causal relationships. Confounding variables (such as era, studio budget, target audience, and genre conventions) substantially influence both representation and reception."
+    }
+  },
+  "explainability": {
+    "permutation_importance": [
+      {
+        "feature": "ff_conversation_share",
+        "importance_mean": 0.022025003242467887,
+        "importance_std": 0.0131598508323707
+      },
+      {
+        "feature": "num_ff_conversations",
+        "importance_mean": 0.015068365584637866,
+        "importance_std": 0.01421797819568328
+      },
+      {
+        "feature": "share_ff_lines_mentioning_men",
+        "importance_mean": 0.011867793847584273,
+        "importance_std": 0.005466910584842668
+      },
+      {
+        "feature": "longest_ff_exchange",
+        "importance_mean": 0.010437956854393804,
+        "importance_std": 0.004382240282559048
+      },
+      {
+        "feature": "detector_stage_b",
+        "importance_mean": 0.009314094744675372,
+        "importance_std": 0.0030705867173147446
+      },
+      {
+        "feature": "avg_male_talk_score_ff",
+        "importance_mean": 0.007712602587110961,
+        "importance_std": 0.0030771173909573553
+      },
+      {
+        "feature": "num_female_chars",
+        "importance_mean": 0.005493461694218549,
+        "importance_std": 0.0034154185253441687
+      },
+      {
+        "feature": "genre_crime",
+        "importance_mean": 0.0053323572753297245,
+        "importance_std": 0.002740235770794588
+      },
+      {
+        "feature": "female_line_share",
+        "importance_mean": 0.003994264188552488,
+        "importance_std": 0.0032310884561589097
+      },
+      {
+        "feature": "female_char_share",
+        "importance_mean": 0.0037219517683452553,
+        "importance_std": 0.0044841028264917615
+      },
+      {
+        "feature": "genre_action",
+        "importance_mean": 0.003706576705956166,
+        "importance_std": 0.0036734870956233495
+      },
+      {
+        "feature": "genre_adventure",
+        "importance_mean": 0.0035994307816043626,
+        "importance_std": 0.0024227406397685134
+      },
+      {
+        "feature": "genre_comedy",
+        "importance_mean": 0.00284901651388163,
+        "importance_std": 0.002124025806497653
+      },
+      {
+        "feature": "detector_stage_a",
+        "importance_mean": 0.002442940413372319,
+        "importance_std": 0.00524188743190102
+      },
+      {
+        "feature": "num_male_chars",
+        "importance_mean": 0.0017574965214158466,
+        "importance_std": 0.003963516833886894
+      },
+      {
+        "feature": "detector_pred",
+        "importance_mean": 0.0014003984090680487,
+        "importance_std": 0.004552196090638145
+      },
+      {
+        "feature": "detector_stage_c",
+        "importance_mean": 0.0014003984090680487,
+        "importance_std": 0.004552196090638145
+      },
+      {
+        "feature": "genre_sci-fi",
+        "importance_mean": 0.0011194216321567252,
+        "importance_std": 0.001709944787976402
+      },
+      {
+        "feature": "imdb_rating",
+        "importance_mean": 0.0008148663420451286,
+        "importance_std": 0.0009980033732893956
+      },
+      {
+        "feature": "genre_animation",
+        "importance_mean": 0.0005413869500757951,
+        "importance_std": 0.0017062806218746316
+      },
+      {
+        "feature": "genre_horror",
+        "importance_mean": 0.00044270285358877226,
+        "importance_std": 0.001913353704979715
+      },
+      {
+        "feature": "log_imdb_votes",
+        "importance_mean": 0.00037196299153483545,
+        "importance_std": 0.0014452690888528104
+      },
+      {
+        "feature": "genre_mystery",
+        "importance_mean": 0.00033649281204710667,
+        "importance_std": 0.0018737881565756235
+      },
+      {
+        "feature": "genre_fantasy",
+        "importance_mean": 0.00016824640602355334,
+        "importance_std": 0.0013356076822934866
+      },
+      {
+        "feature": "genre_biography",
+        "importance_mean": 0.00016824640602355334,
+        "importance_std": 0.0013356076822934866
+      },
+      {
+        "feature": "genre_thriller",
+        "importance_mean": 0.0,
+        "importance_std": 0.0
+      },
+      {
+        "feature": "genre_romance",
+        "importance_mean": 0.0,
+        "importance_std": 0.0
+      },
+      {
+        "feature": "total_conversations",
+        "importance_mean": -0.0004097882760573768,
+        "importance_std": 0.0008195765521147536
+      },
+      {
+        "feature": "year",
+        "importance_mean": -0.0006146824140860652,
+        "importance_std": 0.0009389428969691944
+      },
+      {
+        "feature": "decade",
+        "importance_mean": -0.0008195765521147536,
+        "importance_std": 0.0010037721789153459
+      },
+      {
+        "feature": "genre_drama",
+        "importance_mean": -0.0012293648281721304,
+        "importance_std": 0.0010037721789153459
+      }
+    ],
+    "shap_summary": [
+      {
+        "feature": "ff_conversation_share",
+        "mean_abs_shap": 0.08881071428571427
+      },
+      {
+        "feature": "num_ff_conversations",
+        "mean_abs_shap": 0.06811428571428571
+      },
+      {
+        "feature": "detector_stage_c",
+        "mean_abs_shap": 0.05201428571428575
+      },
+      {
+        "feature": "detector_pred",
+        "mean_abs_shap": 0.051489285714285724
+      },
+      {
+        "feature": "detector_stage_b",
+        "mean_abs_shap": 0.04595714285714285
+      },
+      {
+        "feature": "longest_ff_exchange",
+        "mean_abs_shap": 0.02989999999999999
+      },
+      {
+        "feature": "detector_stage_a",
+        "mean_abs_shap": 0.024528571428571445
+      },
+      {
+        "feature": "share_ff_lines_mentioning_men",
+        "mean_abs_shap": 0.023499999999999993
+      },
+      {
+        "feature": "female_line_share",
+        "mean_abs_shap": 0.02194642857142859
+      },
+      {
+        "feature": "female_char_share",
+        "mean_abs_shap": 0.018164285714285723
+      },
+      {
+        "feature": "avg_male_talk_score_ff",
+        "mean_abs_shap": 0.017196428571428567
+      },
+      {
+        "feature": "num_female_chars",
+        "mean_abs_shap": 0.015149999999999997
+      },
+      {
+        "feature": "genre_horror",
+        "mean_abs_shap": 0.013139285714285711
+      },
+      {
+        "feature": "imdb_rating",
+        "mean_abs_shap": 0.008342857142857138
+      },
+      {
+        "feature": "genre_adventure",
+        "mean_abs_shap": 0.0064071428571428534
+      },
+      {
+        "feature": "genre_action",
+        "mean_abs_shap": 0.006017857142857141
+      },
+      {
+        "feature": "genre_romance",
+        "mean_abs_shap": 0.0057821428571428555
+      },
+      {
+        "feature": "genre_comedy",
+        "mean_abs_shap": 0.005214285714285712
+      },
+      {
+        "feature": "log_imdb_votes",
+        "mean_abs_shap": 0.005110714285714284
+      },
+      {
+        "feature": "num_male_chars",
+        "mean_abs_shap": 0.004753571428571431
+      },
+      {
+        "feature": "genre_crime",
+        "mean_abs_shap": 0.004049999999999996
+      },
+      {
+        "feature": "genre_mystery",
+        "mean_abs_shap": 0.0034607142857142857
+      },
+      {
+        "feature": "genre_sci-fi",
+        "mean_abs_shap": 0.0032214285714285713
+      },
+      {
+        "feature": "total_conversations",
+        "mean_abs_shap": 0.002532142857142859
+      },
+      {
+        "feature": "genre_fantasy",
+        "mean_abs_shap": 0.0021678571428571463
+      },
+      {
+        "feature": "genre_animation",
+        "mean_abs_shap": 0.002160714285714287
+      },
+      {
+        "feature": "genre_biography",
+        "mean_abs_shap": 0.001989285714285715
+      },
+      {
+        "feature": "genre_drama",
+        "mean_abs_shap": 0.0017357142857142862
+      },
+      {
+        "feature": "genre_thriller",
+        "mean_abs_shap": 0.0010928571428571432
+      },
+      {
+        "feature": "year",
+        "mean_abs_shap": 0.0007892857142857143
+      },
+      {
+        "feature": "decade",
+        "mean_abs_shap": 0.00017500000000000013
+      }
+    ]
+  },
+  "fairness_audit": {
+    "decade": [
+      {
+        "group_feature": "decade",
+        "group_value": "1930",
+        "support": 10,
+        "ground_truth_pass_rate": 0.6,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "f1_drop_from_overall": -0.2911,
+        "recall_drop_from_overall": -0.3422,
+        "significant_drop": false
+      },
+      {
+        "group_feature": "decade",
+        "group_value": "1950",
+        "support": 15,
+        "ground_truth_pass_rate": 0.4667,
+        "accuracy": 0.7333,
+        "precision": 1.0,
+        "recall": 0.4286,
+        "f1": 0.6,
+        "f1_drop_from_overall": 0.1089,
+        "recall_drop_from_overall": 0.2292,
+        "significant_drop": true
+      },
+      {
+        "group_feature": "decade",
+        "group_value": "1960",
+        "support": 14,
+        "ground_truth_pass_rate": 0.2143,
+        "accuracy": 0.9286,
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571,
+        "f1_drop_from_overall": -0.1482,
+        "recall_drop_from_overall": -0.3422,
+        "significant_drop": false
+      },
+      {
+        "group_feature": "decade",
+        "group_value": "1970",
+        "support": 35,
+        "ground_truth_pass_rate": 0.3143,
+        "accuracy": 0.8286,
+        "precision": 0.7778,
+        "recall": 0.6364,
+        "f1": 0.7,
+        "f1_drop_from_overall": 0.0089,
+        "recall_drop_from_overall": 0.0214,
+        "significant_drop": false
+      },
+      {
+        "group_feature": "decade",
+        "group_value": "1980",
+        "support": 79,
+        "ground_truth_pass_rate": 0.519,
+        "accuracy": 0.7089,
+        "precision": 0.7812,
+        "recall": 0.6098,
+        "f1": 0.6849,
+        "f1_drop_from_overall": 0.024,
+        "recall_drop_from_overall": 0.048,
+        "significant_drop": false
+      },
+      {
+        "group_feature": "decade",
+        "group_value": "1990",
+        "support": 155,
+        "ground_truth_pass_rate": 0.4903,
+        "accuracy": 0.7419,
+        "precision": 0.7571,
+        "recall": 0.6974,
+        "f1": 0.726,
+        "f1_drop_from_overall": -0.0171,
+        "recall_drop_from_overall": -0.0396,
+        "significant_drop": false
+      },
+      {
+        "group_feature": "decade",
+        "group_value": "2000",
+        "support": 85,
+        "ground_truth_pass_rate": 0.4353,
+        "accuracy": 0.6941,
+        "precision": 0.6897,
+        "recall": 0.5405,
+        "f1": 0.6061,
+        "f1_drop_from_overall": 0.1029,
+        "recall_drop_from_overall": 0.1172,
+        "significant_drop": false
+      }
+    ],
+    "genre": [
+      {
+        "group_feature": "primary_genre",
+        "group_value": "action",
+        "support": 109,
+        "ground_truth_pass_rate": 0.3578,
+        "accuracy": 0.7248,
+        "precision": 0.7647,
+        "recall": 0.3333,
+        "f1": 0.4643,
+        "f1_drop_from_overall": 0.2446,
+        "recall_drop_from_overall": 0.3244,
+        "significant_drop": true
+      },
+      {
+        "group_feature": "primary_genre",
+        "group_value": "adventure",
+        "support": 26,
+        "ground_truth_pass_rate": 0.3462,
+        "accuracy": 0.6923,
+        "precision": 0.6667,
+        "recall": 0.2222,
+        "f1": 0.3333,
+        "f1_drop_from_overall": 0.3756,
+        "recall_drop_from_overall": 0.4355,
+        "significant_drop": true
+      },
+      {
+        "group_feature": "primary_genre",
+        "group_value": "biography",
+        "support": 13,
+        "ground_truth_pass_rate": 0.4615,
+        "accuracy": 0.6923,
+        "precision": 0.75,
+        "recall": 0.5,
+        "f1": 0.6,
+        "f1_drop_from_overall": 0.1089,
+        "recall_drop_from_overall": 0.1578,
+        "significant_drop": true
+      },
+      {
+        "group_feature": "primary_genre",
+        "group_value": "comedy",
+        "support": 77,
+        "ground_truth_pass_rate": 0.6104,
+        "accuracy": 0.7662,
+        "precision": 0.7959,
+        "recall": 0.8298,
+        "f1": 0.8125,
+        "f1_drop_from_overall": -0.1036,
+        "recall_drop_from_overall": -0.172,
+        "significant_drop": false
+      },
+      {
+        "group_feature": "primary_genre",
+        "group_value": "crime",
+        "support": 45,
+        "ground_truth_pass_rate": 0.4222,
+        "accuracy": 0.8222,
+        "precision": 0.8667,
+        "recall": 0.6842,
+        "f1": 0.7647,
+        "f1_drop_from_overall": -0.0558,
+        "recall_drop_from_overall": -0.0265,
+        "significant_drop": false
+      },
+      {
+        "group_feature": "primary_genre",
+        "group_value": "drama",
+        "support": 89,
+        "ground_truth_pass_rate": 0.4157,
+        "accuracy": 0.7303,
+        "precision": 0.6585,
+        "recall": 0.7297,
+        "f1": 0.6923,
+        "f1_drop_from_overall": 0.0166,
+        "recall_drop_from_overall": -0.072,
+        "significant_drop": false
+      },
+      {
+        "group_feature": "primary_genre",
+        "group_value": "horror",
+        "support": 25,
+        "ground_truth_pass_rate": 0.76,
+        "accuracy": 0.84,
+        "precision": 0.8947,
+        "recall": 0.8947,
+        "f1": 0.8947,
+        "f1_drop_from_overall": -0.1858,
+        "recall_drop_from_overall": -0.237,
+        "significant_drop": false
+      }
+    ],
+    "language": [
+      {
+        "group_feature": "language",
+        "group_value": "en",
+        "support": 400,
+        "ground_truth_pass_rate": 0.465,
+        "accuracy": 0.7475,
+        "precision": 0.7673,
+        "recall": 0.6559,
+        "f1": 0.7072,
+        "f1_drop_from_overall": 0.0017,
+        "recall_drop_from_overall": 0.0018,
+        "significant_drop": false
+      }
+    ]
+  }
+}

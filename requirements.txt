@@ -1,0 +1,17 @@
+numpy==2.5.3
+pandas==3.0.6
+scipy==1.18.1
+scikit-learn==1.9.1
+matplotlib==3.11.2
+seaborn==0.13.2
+shap==0.52.0
+statsmodels==0.15.0
+pyarrow==25.0.1
+pyyaml==6.0.3
+requests==2.34.2
+typer==0.27.2
+rich==15.0.0
+pytest==9.1.1
+jupyter==1.1.1
+nbconvert==7.17.1
+ipykernel==7.4.0

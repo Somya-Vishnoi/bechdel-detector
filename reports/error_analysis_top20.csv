@@ -1,0 +1,41 @@
+error_type,cornell_id,title_cornell,year,bechdel_rating,pass,detector_pass,num_female_chars,num_unknown_chars,num_ff_conversations,primary_reason
+"False Positive (Detector=Pass, Crowd=Fail)",m17,an american werewolf in london,1981,2,0,True,3,7,1,Crowd labeled 2 (talked only about a man): pronoun/vocab list missed contextual male reference
+"False Positive (Detector=Pass, Crowd=Fail)",m22,austin powers: international man of mystery,1997,2,0,True,5,4,5,Crowd labeled 2 (talked only about a man): pronoun/vocab list missed contextual male reference
+"False Positive (Detector=Pass, Crowd=Fail)",m30,big fish,2003,1,0,True,3,0,6,Crowd labeled 1 (women do not talk): detector matched F-F conversation not credited by crowd or character misgendered
+"False Positive (Detector=Pass, Crowd=Fail)",m39,the bourne supremacy,2004,2,0,True,4,6,7,Crowd labeled 2 (talked only about a man): pronoun/vocab list missed contextual male reference
+"False Positive (Detector=Pass, Crowd=Fail)",m40,braveheart,1995,2,0,True,3,5,3,Crowd labeled 2 (talked only about a man): pronoun/vocab list missed contextual male reference
+"False Positive (Detector=Pass, Crowd=Fail)",m41,the butterfly effect,2004,2,0,True,5,1,3,Crowd labeled 2 (talked only about a man): pronoun/vocab list missed contextual male reference
+"False Positive (Detector=Pass, Crowd=Fail)",m55,eternal sunshine of the spotless mind,2004,2,0,True,4,6,3,Crowd labeled 2 (talked only about a man): pronoun/vocab list missed contextual male reference
+"False Positive (Detector=Pass, Crowd=Fail)",m59,fast times at ridgemont high,1982,2,0,True,4,6,32,Crowd labeled 2 (talked only about a man): pronoun/vocab list missed contextual male reference
+"False Positive (Detector=Pass, Crowd=Fail)",m85,hellbound: hellraiser ii,1988,1,0,True,4,2,3,Crowd labeled 1 (women do not talk): detector matched F-F conversation not credited by crowd or character misgendered
+"False Positive (Detector=Pass, Crowd=Fail)",m121,little nicky,2000,1,0,True,3,2,5,Crowd labeled 1 (women do not talk): detector matched F-F conversation not credited by crowd or character misgendered
+"False Positive (Detector=Pass, Crowd=Fail)",m123,lost highway,1997,1,0,True,5,6,2,Crowd labeled 1 (women do not talk): detector matched F-F conversation not credited by crowd or character misgendered
+"False Positive (Detector=Pass, Crowd=Fail)",m163,punch-drunk love,2002,1,0,True,4,6,8,Crowd labeled 1 (women do not talk): detector matched F-F conversation not credited by crowd or character misgendered
+"False Positive (Detector=Pass, Crowd=Fail)",m175,"sex, lies, and videotape",1989,2,0,True,2,4,16,Crowd labeled 2 (talked only about a man): pronoun/vocab list missed contextual male reference
+"False Positive (Detector=Pass, Crowd=Fail)",m189,spider-man,2002,1,0,True,3,10,2,Crowd labeled 1 (women do not talk): detector matched F-F conversation not credited by crowd or character misgendered
+"False Positive (Detector=Pass, Crowd=Fail)",m202,swingers,1996,2,0,True,5,5,5,Crowd labeled 2 (talked only about a man): pronoun/vocab list missed contextual male reference
+"False Positive (Detector=Pass, Crowd=Fail)",m215,the jacket,2005,2,0,True,4,1,5,Crowd labeled 2 (talked only about a man): pronoun/vocab list missed contextual male reference
+"False Positive (Detector=Pass, Crowd=Fail)",m229,wild at heart,1990,2,0,True,3,11,5,Crowd labeled 2 (talked only about a man): pronoun/vocab list missed contextual male reference
+"False Positive (Detector=Pass, Crowd=Fail)",m240,american pie,1999,2,0,True,8,6,3,Crowd labeled 2 (talked only about a man): pronoun/vocab list missed contextual male reference
+"False Positive (Detector=Pass, Crowd=Fail)",m254,badlands,1973,0,0,True,2,3,2,"Crowd labeled 0 (<2 women): crowd considered characters unnamed or minor, while script credited them"
+"False Positive (Detector=Pass, Crowd=Fail)",m258,basquiat,1996,2,0,True,5,9,4,Crowd labeled 2 (talked only about a man): pronoun/vocab list missed contextual male reference
+"False Negative (Detector=Fail, Crowd=Pass)",m16,amadeus,1984,3,1,False,4,15,0,Stage B failed: Cornell dialogue transcript omits passing scene or characters speak to group
+"False Negative (Detector=Fail, Crowd=Pass)",m29,basic,2003,3,1,False,1,6,0,Stage A failed: only 1 confirmed female chars (6 marked '?' in Cornell)
+"False Negative (Detector=Fail, Crowd=Pass)",m35,blast from the past,1999,3,1,False,5,5,0,Stage B failed: Cornell dialogue transcript omits passing scene or characters speak to group
+"False Negative (Detector=Fail, Crowd=Pass)",m89,highlander,1986,3,1,False,1,23,0,Stage A failed: only 1 confirmed female chars (23 marked '?' in Cornell)
+"False Negative (Detector=Fail, Crowd=Pass)",m93,human nature,2001,3,1,False,2,5,0,Stage B failed: Cornell dialogue transcript omits passing scene or characters speak to group
+"False Negative (Detector=Fail, Crowd=Pass)",m95,i am legend,2007,3,1,False,1,3,0,Stage A failed: only 1 confirmed female chars (3 marked '?' in Cornell)
+"False Negative (Detector=Fail, Crowd=Pass)",m97,independence day,1996,3,1,False,3,7,0,Stage B failed: Cornell dialogue transcript omits passing scene or characters speak to group
+"False Negative (Detector=Fail, Crowd=Pass)",m104,jfk,1991,3,1,False,6,14,0,Stage B failed: Cornell dialogue transcript omits passing scene or characters speak to group
+"False Negative (Detector=Fail, Crowd=Pass)",m107,jason x,2001,3,1,False,2,7,0,Stage B failed: Cornell dialogue transcript omits passing scene or characters speak to group
+"False Negative (Detector=Fail, Crowd=Pass)",m108,jaws,1975,3,1,False,1,3,0,Stage A failed: only 1 confirmed female chars (3 marked '?' in Cornell)
+"False Negative (Detector=Fail, Crowd=Pass)",m118,legend,1985,3,1,False,3,6,0,Stage B failed: Cornell dialogue transcript omits passing scene or characters speak to group
+"False Negative (Detector=Fail, Crowd=Pass)",m151,no country for old men,2007,3,1,False,2,7,0,Stage B failed: Cornell dialogue transcript omits passing scene or characters speak to group
+"False Negative (Detector=Fail, Crowd=Pass)",m157,the patriot,2000,3,1,False,4,8,0,Stage B failed: Cornell dialogue transcript omits passing scene or characters speak to group
+"False Negative (Detector=Fail, Crowd=Pass)",m167,rear window,1954,3,1,False,2,6,0,Stage B failed: Cornell dialogue transcript omits passing scene or characters speak to group
+"False Negative (Detector=Fail, Crowd=Pass)",m177,shock treatment,1981,3,1,False,3,13,0,Stage B failed: Cornell dialogue transcript omits passing scene or characters speak to group
+"False Negative (Detector=Fail, Crowd=Pass)",m178,sideways,2004,3,1,False,6,3,0,Stage B failed: Cornell dialogue transcript omits passing scene or characters speak to group
+"False Negative (Detector=Fail, Crowd=Pass)",m193,star trek: the wrath of khan,1982,3,1,False,2,9,0,Stage B failed: Cornell dialogue transcript omits passing scene or characters speak to group
+"False Negative (Detector=Fail, Crowd=Pass)",m194,star trek iv: the voyage home,1986,3,1,False,3,8,0,Stage B failed: Cornell dialogue transcript omits passing scene or characters speak to group
+"False Negative (Detector=Fail, Crowd=Pass)",m195,star trek: insurrection,1998,3,1,False,4,7,0,Stage B failed: Cornell dialogue transcript omits passing scene or characters speak to group
+"False Negative (Detector=Fail, Crowd=Pass)",m196,star trek: first contact,1996,3,1,False,3,7,0,Stage B failed: Cornell dialogue transcript omits passing scene or characters speak to group

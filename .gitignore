@@ -37,10 +37,6 @@ ENV/
 
 # Environment variables
 .env
-
-# Large raw data files (DO NOT COMMIT RAW CORPUS/ZIPS/CACHE)
-data/raw/*
-!data/raw/.gitkeep
 notebooks/data/
 notebooks/reports/
 

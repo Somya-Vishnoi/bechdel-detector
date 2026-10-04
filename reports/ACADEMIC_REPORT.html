@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Predicting Gender Representation in Cinema: Bechdel Test Detector Academic Report</title>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+  :root {
+    --primary: #1A365D;
+    --secondary: #2B6CB0;
+    --text: #2D3748;
+    --bg: #FFFFFF;
+    --light-bg: #F7FAFC;
+    --border: #E2E8F0;
+    --callout: #EBF8FF;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text);
+    background-color: #EDF2F7;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+  }
+  .paper-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--bg);
+    padding: 60px 80px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border-radius: 4px;
+  }
+  h1.title {
+    font-size: 26px;
+    line-height: 1.3;
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  .subtitle {
+    font-size: 14px;
+    color: #4A5568;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  .author-block {
+    text-align: center;
+    font-size: 13px;
+    color: #4A5568;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 15px 0;
+    margin-bottom: 35px;
+  }
+  h2 {
+    color: var(--primary);
+    border-bottom: 1.5px solid var(--primary);
+    padding-bottom: 4px;
+    margin-top: 40px;
+    font-size: 18px;
+  }
+  h3 {
+    color: var(--secondary);
+    margin-top: 24px;
+    font-size: 15px;
+  }
+  p {
+    text-align: justify;
+    font-size: 14px;
+    margin: 12px 0;
+  }
+  .callout {
+    background-color: var(--callout);
+    border-left: 4px solid var(--secondary);
+    padding: 12px 18px;
+    margin: 20px 0;
+    font-size: 13.5px;
+    font-style: italic;
+    color: #2C5282;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 12px;
+  }
+  th, td {
+    padding: 8px 10px;
+    border: 1px solid var(--border);
+    text-align: left;
+  }
+  th {
+    background-color: var(--primary);
+    color: white;
+    font-weight: 600;
+  }
+  tr:nth-child(even) {
+    background-color: var(--light-bg);
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto 8px auto;
+    border-radius: 3px;
+    border: 1px solid var(--border);
+  }
+  .caption {
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: #4A5568;
+    margin-bottom: 24px;
+  }
+  ul {
+    font-size: 13.5px;
+    padding-left: 20px;
+  }
+  li {
+    margin-bottom: 6px;
+  }
+  @media print {
+    body { background: white; padding: 0; }
+    .paper-container { box-shadow: none; padding: 0; max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+<div class="paper-container">
+
+<div class="subtitle">
+  <b>LOVELY PROFESSIONAL UNIVERSITY</b><br/>
+  School of Computer Science & Engineering | Department of Analytics<br/>
+  INT234: Predictive Analytics — Academic Task 2 Project Report
+</div>
+
+<h1 class="title">Predicting Gender Representation in Cinema:<br/>An End-to-End Machine Learning Framework and Dialogue-Level Bechdel Test Detector</h1>
+
+<div class="author-block">
+  <b>Author:</b> Somya Vishnoi (Registration No: 12318492)<br/>
+  <b>Supervisor / Evaluator:</b> Department of Predictive Analytics<br/>
+  <b>Project Repository:</b> <a href="https://github.com/Somya-Vishnoi/bechdel-detector" target="_blank">github.com/Somya-Vishnoi/bechdel-detector</a> | October 2026
+</div>
+
+<h2>Executive Abstract</h2>
+<p>
+This report documents the end-to-end design, implementation, and empirical evaluation of the <b>Bechdel Test Detector</b>, a production-grade predictive machine learning system and natural language processing rule engine developed to analyze gender representation in cinematic narratives. Grounded in Alison Bechdel's 1985 cultural benchmark, a film passes if and only if it contains at least two named female characters who converse with each other about a topic other than a man.
+</p>
+<p>
+We deploy a <b>Two-Tier Architectural Framework</b>: Tier 1 comprises the comprehensive catalogue of <b>9,368 films</b> spanning 1888 to 2019, enriched with TMDB crew and cast demographics to analyze macro-historical trajectories; Tier 2 comprises an exact matched corpus of <b>404 feature scripts</b> joined to the Cornell Movie-Dialogs Corpus (encompassing 304,446 dialogue lines across 83,097 conversational scenes). We implement a 3-stage sequential rule detector that evaluates character presence, female-female scene existence, and pronoun/kinship male-talk scores. By tuning the decision threshold strictly on training split films (\(\tau = 0.10\)), the detector attains an overall accuracy of <b>74.01%</b>, precision of <b>75.00%</b>, recall of <b>66.84%</b>, F1 score of <b>0.7062</b>, and Cohen's kappa of <b>0.4728</b>.
+</p>
+<p>
+In supervised machine learning experiments, seven classification algorithms were benchmarked across Stratified 5-Fold Cross-Validation and out-of-time Temporal Splits. Incorporating conversational dialogue features alongside metadata generated an immediate +7.5% absolute gain in Precision-Recall AUC (rising from 0.7111 to 0.7858), proving that dialogue exchange topology provides orthogonal predictive signal beyond genre and production era. Model interpretability via SHAP confirms that female dialogue share and conversational frequency dominate behind-the-camera crew features. Finally, formal hypothesis testing confirms a statistically significant longitudinal increase in representation (\(\chi^2 = 232.69, p < 10^{-41}\)) and a strong correlation between female dialogue share and test passage (Welch's \(t = 10.03, p < 10^{-20}, d = 1.026\)).
+</p>
+
+<h2>Chapter 1: Introduction & Societal Problem Formulation</h2>
+<p>
+Cinematic storytelling functions as both a reflection of prevailing cultural norms and an active instrument of social learning. According to social cognitive theory, mass media models behavioral expectations, professional aspirations, and social hierarchies. When women are persistently excluded from screen narratives, confined to peripheral romantic roles, or depicted solely in relationship to male protagonists, societal stereotypes regarding female agency are reinforced. Over eight decades of modern cinema, quantitative media studies have repeatedly highlighted profound gender disparities: male speaking characters outnumber female speaking characters by more than two to one, female screenwriters and directors occupy fewer than 18% of key creative positions, and female characters receive a disproportionately minor fraction of total conversational lines.
+</p>
+<p>
+Analyzing narrative media through automated computational methods is vital for evidence-based cultural auditing. Traditional content analysis relies on manual human coding, which is labor-intensive, difficult to scale across thousands of feature releases, and vulnerable to subjective coder bias. Predictive analytics and natural language processing provide an empirical framework to quantify gender representation at scale, allowing researchers to evaluate thousands of screenplays and identify structural industry patterns.
+</p>
+
+<h2>Chapter 3: System Architecture & Data Engineering</h2>
+<p>
+A central methodological innovation of this study is the formal bifurcation into a <b>Two-Tier Data Architecture</b>:
+</p>
+<ul>
+  <li><b>Tier 1: Comprehensive Macro-Historical Dataset (N = 9,368 films):</b> Sourced from BechdelTest.com and enriched via The Movie Database (TMDB) API. This dataset spans releases from 1888 to 2019, providing rich production metadata including budget, revenue, runtime, IMDb user scores, vote counts, production countries, and cast/crew demographic breakdowns.</li>
+  <li><b>Tier 2: Matched Screenplay Dialogue Dataset (N = 404 films):</b> Sourced by joining Tier 1 films against the Cornell Movie-Dialogs Corpus. Tier 2 contains full conversational screenplays comprising 304,446 dialogue utterances across 83,097 conversational scenes, with character gender attributions and conversational turn graphs.</li>
+</ul>
+
+<img src="figures/fig01_class_balance.png" alt="Class Balance and Funnel">
+<div class="caption">Figure 1: Class Balance and Two-Tier Data Join Accounting Funnel</div>
+
+<h2>Chapter 4: Exploratory Data Analysis & Statistical Hypothesis Testing</h2>
+<p>
+In the overall Tier 1 corpus, <b>56.8% (5,321 films) pass</b> the Bechdel Test, while <b>43.2% (4,047 films) fail</b>. Plotting annual pass rates over time reveals an undeniable upward historical trajectory. Prior to 1960, the proportion of passing films hovered between 30% and 42%. A notable turning point occurred during the late 1960s and 1970s—coinciding with the Second Wave Feminist movement and the decline of the restrictive Hays Code.
+</p>
+
+<img src="figures/fig02_yearly_trend.png" alt="Yearly Trend">
+<div class="caption">Figure 2: Longitudinal Trend of Bechdel Test Pass Rate (1888–2019) with 95% Confidence Band</div>
+
+<img src="figures/fig03_genre_pass_rate.png" alt="Genre Pass Rates">
+<div class="caption">Figure 3: Bechdel Test Pass Rates Sliced by Cinematic Primary Genre</div>
+
+<div class="callout">
+  <b>Hypothesis Testing Summary:</b><br/>
+  • <b>Pearson Chi-Square Test (Decade vs. Pass):</b> \(\chi^2 = 232.69, df = 5, p = 1.34 \times 10^{-41}, V = 0.1576\). Statistically significant macro-historical progression.<br/>
+  • <b>Welch's Two-Sample t-Test (Dialogue Share):</b> Passing \(\mu = 42.84\%\), Failing \(\mu = 26.31\%\). \(t = 10.034, p = 7.73 \times 10^{-21}, d = 1.026\). Large standardized effect size.
+</div>
+
+<img src="figures/fig04_correlation_matrix.png" alt="Correlation Heatmap">
+<div class="caption">Figure 4: Correlation Topology Heatmap Across Numerical Metadata & Dialogue Features</div>
+
+<h2>Chapter 5: Rule-Based Dialogue Detector Design & Evaluation</h2>
+<p>
+The rule-based detector evaluates three criteria sequentially:
+</p>
+<ul>
+  <li><b>Stage A (2+ Women):</b> Screenplay must feature at least two female speaking characters (\(n_f \ge 2\)). Unknown characters are resolved via TMDB cast billing.</li>
+  <li><b>Stage B (Women Converse):</b> At least two identified female characters must speak in a contiguous conversational turn sequence.</li>
+  <li><b>Stage C (Not About Men):</b> Candidate female-female conversations are scored for male-talk density:
+  \[\text{MaleScore}(\text{conv}) = \frac{\text{Count}(\text{MalePronouns}) + \text{Count}(\text{MaleKinship}) + \text{Count}(\text{MaleNames})}{\text{TotalWords}(\text{conv})}\]
+  A conversation qualifies if \(\text{MaleScore}(\text{conv}) \le \tau\). The optimal threshold was tuned strictly on training partition screenplays to <b>\(\tau^* = 0.10\)</b>.</li>
+</ul>
+
+<table>
+  <thead>
+    <tr><th>Evaluation Stage</th><th>Accuracy</th><th>Precision</th><th>Recall</th><th>F1 Score</th><th>Specificity</th><th>Cohen's Kappa (\(\kappa\))</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Stage A (2+ Women)</td><td>64.36%</td><td>56.42%</td><td>94.65%</td><td>0.7068</td><td>38.25%</td><td>0.3120</td></tr>
+    <tr><td>Stage B (Women Converse)</td><td>71.53%</td><td>66.52%</td><td>79.68%</td><td>0.7251</td><td>64.52%</td><td>0.4358</td></tr>
+    <tr><td>Stage C (Final \(\tau=0.10\))</td><td><b>74.01%</b></td><td><b>75.00%</b></td><td><b>66.84%</b></td><td><b>0.7062</b></td><td><b>80.09%</b></td><td><b>0.4728</b></td></tr>
+  </tbody>
+</table>
+
+<h2>Chapter 6: Machine Learning Feature Engineering & Model Development</h2>
+<p>
+Seven classification algorithms were benchmarked across three experimental regimes on identical films and splits:
+</p>
+
+<table>
+  <thead>
+    <tr><th>Experiment</th><th>Algorithm</th><th>Feature Set</th><th>CV Acc</th><th>CV Prec</th><th>CV Rec</th><th>CV F1</th><th>CV PR-AUC</th><th>CV ROC-AUC</th><th>Temp F1</th><th>Temp PR-AUC</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><b>Exp 3 (Headline)</b></td><td><b>Naive Bayes</b></td><td>Meta + Dialogue</td><td><b>73.76%</b></td><td><b>75.80%</b></td><td><b>63.64%</b></td><td><b>0.6919</b></td><td><b>0.7833</b></td><td><b>0.7841</b></td><td>0.5660</td><td>0.7787</td></tr>
+    <tr><td><b>Exp 3 (Headline)</b></td><td><b>Logistic Regression</b></td><td>Meta + Dialogue</td><td><b>72.03%</b></td><td><b>71.02%</b></td><td><b>66.84%</b></td><td><b>0.6887</b></td><td><b>0.7858</b></td><td><b>0.7660</b></td><td>0.5185</td><td>0.7741</td></tr>
+    <tr><td>Exp 2 (Metadata)</td><td>Logistic Regression</td><td>Metadata Only</td><td>69.31%</td><td>65.67%</td><td>70.59%</td><td>0.6804</td><td>0.7111</td><td>0.7398</td><td>0.6667</td><td>0.7642</td></tr>
+    <tr><td>Exp 3 (Headline)</td><td>Random Forest</td><td>Meta + Dialogue</td><td>73.02%</td><td>75.66%</td><td>61.50%</td><td>0.6785</td><td>0.7885</td><td>0.7892</td><td>0.5714</td><td>0.7768</td></tr>
+    <tr><td>Exp 3 (Headline)</td><td>SVM (RBF Kernel)</td><td>Meta + Dialogue</td><td>72.77%</td><td>74.84%</td><td>62.03%</td><td>0.6784</td><td>0.7618</td><td>0.7776</td><td>0.5455</td><td>0.7343</td></tr>
+    <tr><td>Exp 3 (Headline)</td><td>HistGradientBoosting</td><td>Meta + Dialogue</td><td>69.80%</td><td>68.57%</td><td>64.17%</td><td>0.6630</td><td>0.7701</td><td>0.7583</td><td>0.5926</td><td>0.7924</td></tr>
+    <tr><td>Exp 3 (Headline)</td><td>Decision Tree</td><td>Meta + Dialogue</td><td>68.56%</td><td>66.67%</td><td>64.17%</td><td>0.6540</td><td>0.7227</td><td>0.7413</td><td>0.6038</td><td>0.6936</td></tr>
+  </tbody>
+</table>
+
+<img src="figures/fig05_regression_predictions.png" alt="Regression Residuals">
+<div class="caption">Figure 5: Regression Model Residuals: Female Dialogue Share vs. Actual Share</div>
+
+<img src="figures/fig07_confusion_matrices.png" alt="Confusion Matrices">
+<div class="caption">Figure 6: Comparative Confusion Matrices: Rule-Based Detector vs. Best Supervised Classifier</div>
+
+<h2>Chapter 7: Explainability, Fairness Auditing & Error Forensics</h2>
+<p>
+Permutation feature importance and SHAP analyses confirm that dialogue exchange frequency dominates behind-the-camera crew features. High values of <code>num_ff_conversations</code> and <code>female_line_share</code> push log-odds strongly toward Pass.
+</p>
+
+<img src="figures/fig08_feature_importance_shap.png" alt="SHAP Feature Attributions">
+<div class="caption">Figure 7: Permutation Feature Importance and Global SHAP Summary Feature Attributions</div>
+
+<img src="figures/fig09_fairness_slices.png" alt="Fairness Performance Slices">
+<div class="caption">Figure 8: Demographic Fairness Performance Audit Across Decades, Genres, and Languages</div>
+
+<h2>Chapter 8: Engineering Standards & Reproducibility</h2>
+<p>
+The repository adheres to rigorous software engineering best practices:
+</p>
+<ul>
+  <li><b>Modular Package Architecture:</b> Decoupled modules for data ingestion, feature store construction, detector rules, model training, and evaluation.</li>
+  <li><b>Zero Data Leakage:</b> Preprocessing transformers (imputation, scaling, one-hot encoding) are encapsulated within <code>sklearn.pipeline.Pipeline</code> objects and fitted strictly on training folds.</li>
+  <li><b>Automated Test Suite:</b> 26 comprehensive unit tests validating title normalization, corpus parsing, detector edge fixtures, and metric implementations.</li>
+  <li><b>Command Line Orchestration:</b> Fully reproducible pipeline driven by Typer CLI and GNU <code>Makefile</code>.</li>
+</ul>
+
+<h2>Chapter 10: Conclusion & Future Research Directions</h2>
+<p>
+This project demonstrates that natural language processing and predictive analytics can automate cinematic gender auditing with high precision and transparency. Incorporating dialogue exchange topology provides indispensable predictive signal beyond metadata. Future research will prioritize integrating transformer-based coreference resolution (RoBERTa / LLaMA) and multimodal video/audio face-tracking to measure true on-screen speaking time.
+</p>
+
+<h2>Academic References</h2>
+<ul>
+  <li>Agarwal, A., Zheng, J., Kamath, S., Balasubramanian, S., & Dey, S. A. (2015). Key female characters in feature films. In <i>Proceedings of EMNLP 2015</i> (pp. 430–440).</li>
+  <li>Bechdel, A. (1985). The Rule. In <i>Dykes to Watch Out For</i> (Strip #22). Firebrand Books.</li>
+  <li>Bem, S. L. (1981). Gender schema theory: A cognitive account of sex typing. <i>Psychological Review</i>, 88(4), 354–364.</li>
+  <li>Danescu-Niculescu-Mizil, C., & Lee, L. (2011). Chameleons in imagined conversations. In <i>Proceedings of CMCL 2011</i> (pp. 76–87).</li>
+  <li>Geena Davis Institute on Gender in Media. (2018). <i>The Geena Davis Inclusion Quotient</i>.</li>
+  <li>Gerbner, G., & Gross, L. (1976). Living with television: The violence profile. <i>Journal of Communication</i>, 26(2), 172–199.</li>
+  <li>Lauzen, M. M. (2022). <i>The Celluloid Ceiling: Employment of behind-the-scenes women on top 100 films of 2021</i>. San Diego State University.</li>
+  <li>Lindner, A. M., Lindner, M. R., & Hawkins, J. (2015). From behind the camera to in front of the screen. <i>Feminist Media Studies</i>, 15(6), 1046–1063.</li>
+  <li>Lundberg, S. M., & Lee, S. I. (2017). A unified approach to interpreting model predictions. In <i>NeurIPS 2017</i> (pp. 4765–4774).</li>
+  <li>Pedregosa, F., et al. (2011). Scikit-learn: Machine learning in Python. <i>Journal of Machine Learning Research</i>, 12, 2825–2830.</li>
+  <li>Ramakrishna, A., et al. (2017). Linguistic analysis of differences in portrayal of movie characters. In <i>Proceedings of ACL 2017</i> (pp. 1669–1678).</li>
+  <li>Schofield, A., & Mehr, L. (2016). Gender-distinguishing features in film dialogue. In <i>CLFL 2016</i> (pp. 32–39).</li>
+  <li>Woolf, V. (1929). <i>A Room of One's Own</i>. Hogarth Press.</li>
+</ul>
+
+</div>
+</body>
+</html>

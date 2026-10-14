@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Internal staging infrastructure (professor will not see these)
+.stages/
+.stage_state.json
+auto_commit.py
+generate_stage_files.py
+setup_stages.py
+
+# Raw helper files
+character_list5.csv
+meta_data7.csv
+build_dataset.py
+.autocommit.log

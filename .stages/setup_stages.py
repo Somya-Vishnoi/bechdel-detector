@@ -1,0 +1,91 @@
+"""
+Setup 12 progressive stages for CA2 Bechdel Machine Learning Project.
+Each stage represents an incremental milestone in the project lifecycle from Oct 14 to Oct 30.
+"""
+
+import os
+import json
+
+STAGES_DIR = "/Users/somya/Desktop/CA2 project ML/.stages"
+os.makedirs(STAGES_DIR, exist_ok=True)
+
+# Schedule specification
+SCHEDULE = [
+    {
+        "stage": 1,
+        "date": "2026-10-14",
+        "message": "Initial commit: project structure, raw dialogue dataset, and environment setup",
+        "description": "Initial repository setup with dataset import and requirements"
+    },
+    {
+        "stage": 2,
+        "date": "2026-10-16",
+        "message": "feat: add initial exploratory inspection and summary statistics profiling",
+        "description": "Exploratory data inspection with head, info, and summary statistics"
+    },
+    {
+        "stage": 3,
+        "date": "2026-10-18",
+        "message": "feat: handle missing values and engineer decade feature for temporal analysis",
+        "description": "Data cleaning, mean imputation, and decade feature engineering"
+    },
+    {
+        "stage": 4,
+        "date": "2026-10-20",
+        "message": "feat: implement Objective 1 female dialogue percentage across Bechdel ratings",
+        "description": "Objective 1 bar chart visualization across rating categories"
+    },
+    {
+        "stage": 5,
+        "date": "2026-10-22",
+        "message": "feat: implement Objective 2 historical dialogue share evolution by decade",
+        "description": "Objective 2 decade-wise trend line plot with shaded area"
+    },
+    {
+        "stage": 6,
+        "date": "2026-10-24",
+        "message": "feat: implement Objective 3 correlation matrix heatmap for dialogue features",
+        "description": "Objective 3 correlation matrix and collinearity heatmap"
+    },
+    {
+        "stage": 7,
+        "date": "2026-10-25",
+        "message": "feat: implement Objective 4 IQR outlier detection and distribution filtering",
+        "description": "Objective 4 outlier detection using IQR and boxplot visualization"
+    },
+    {
+        "stage": 8,
+        "date": "2026-10-26",
+        "message": "feat: apply MinMaxScaler feature normalization to numerical dialogue variables",
+        "description": "Feature scaling via MinMaxScaler across word and character metrics"
+    },
+    {
+        "stage": 9,
+        "date": "2026-10-27",
+        "message": "feat: implement Objective 5 Simple and Multiple Linear Regression (OLS) baselines",
+        "description": "Objective 5 Simple & Multiple Linear Regression modeling with MAE, MSE, RMSE, R2"
+    },
+    {
+        "stage": 10,
+        "date": "2026-10-28",
+        "message": "feat: add Polynomial Regression and evaluate regression actual vs predicted fit",
+        "description": "Objective 5 Polynomial Regression (Degree 2) and Actual vs Predicted fit chart"
+    },
+    {
+        "stage": 11,
+        "date": "2026-10-29",
+        "message": "feat: implement Objective 6 classification baselines (Logistic, KNN, Naive Bayes)",
+        "description": "Objective 6 Supervised classification baselines with evaluation metrics"
+    },
+    {
+        "stage": 12,
+        "date": "2026-10-30",
+        "message": "feat: finalize full classification benchmark, champion model selection, and comparison plot",
+        "description": "Objective 6 Decision Trees, SVM, champion selection, and benchmark comparison chart"
+    }
+]
+
+with open(os.path.join(STAGES_DIR, "schedule.json"), "w") as f:
+    json.dump(SCHEDULE, f, indent=2)
+
+print("Schedule written successfully.")

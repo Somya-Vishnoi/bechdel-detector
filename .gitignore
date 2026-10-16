@@ -43,3 +43,4 @@ character_list5.csv
 meta_data7.csv
 build_dataset.py
 .autocommit.log
+bechdel_analysis_full.py

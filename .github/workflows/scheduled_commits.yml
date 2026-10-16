@@ -1,0 +1,109 @@
+name: Project Milestone Automation
+
+on:
+  schedule:
+    # 09:00 UTC = 14:30 IST (2:30 PM IST)
+    - cron: '0 9 * * *'
+    # 10:30 UTC = 16:00 IST (4:00 PM IST catch-up)
+    - cron: '30 10 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  progress:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Check and Advance Milestone
+        run: |
+          python3 - << 'EOF'
+          import os
+          import json
+          import subprocess
+          from datetime import datetime, timezone, timedelta
+
+          # IST timezone (UTC + 5:30)
+          ist = timezone(timedelta(hours=5, minutes=30))
+          now_ist = datetime.now(ist)
+          today_str = now_ist.strftime("%Y-%m-%d")
+          print(f"Current Date (IST): {today_str}")
+
+          # Fetch schedule and stages from release-stages branch
+          subprocess.run(["git", "fetch", "origin", "release-stages:release-stages"], check=True)
+          schedule_raw = subprocess.check_output(
+              ["git", "show", "release-stages:.stages/schedule.json"], text=True
+          )
+          schedule = json.loads(schedule_raw)
+
+          # Determine current stage from git log on main
+          log_output = subprocess.check_output(
+              ["git", "log", "--pretty=format:%s"], text=True
+          ).splitlines()
+
+          current_stage = 0
+          for s in schedule:
+              msg = s["message"]
+              if any(msg in line for line in log_output):
+                  current_stage = max(current_stage, s["stage"])
+
+          print(f"Current Completed Stage on main: {current_stage} of {len(schedule)}")
+
+          next_stage = current_stage + 1
+          if next_stage > len(schedule):
+              print("All 12 stages completed. Project is finalized!")
+              exit(0)
+
+          next_meta = next(s for s in schedule if s["stage"] == next_stage)
+          scheduled_date = next_meta["date"]
+          print(f"Next Stage {next_stage} scheduled for: {scheduled_date}")
+
+          if today_str < scheduled_date:
+              print(f"Stage {next_stage} is not due yet. Scheduled for {scheduled_date}. Exiting cleanly.")
+              exit(0)
+
+          print(f"Advancing to Stage {next_stage}: {next_meta['message']}")
+
+          # Extract code from release-stages branch
+          stage_filename = f".stages/stage_{next_stage:02d}.py"
+          code = subprocess.check_output(
+              ["git", "show", f"release-stages:{stage_filename}"], text=True
+          )
+
+          with open("bechdel_analysis.py", "w") as f:
+              f.write(code)
+
+          # Configure git author
+          subprocess.run(["git", "config", "user.name", "Somya Vishnoi"], check=True)
+          subprocess.run(["git", "config", "user.email", "somyavishnoi32@gmail.com"], check=True)
+
+          # Commit with exact scheduled timestamp
+          commit_time = f"{scheduled_date} 14:30:00 +0530"
+          env = os.environ.copy()
+          env["GIT_AUTHOR_DATE"] = commit_time
+          env["GIT_COMMITTER_DATE"] = commit_time
+
+          subprocess.run(["git", "add", "bechdel_analysis.py"], check=True)
+          commit_res = subprocess.run(
+              ["git", "commit", "-m", next_meta["message"]],
+              env=env,
+              capture_output=True,
+              text=True
+          )
+          print(commit_res.stdout)
+
+          # Push to origin main
+          subprocess.run(["git", "push", "origin", "main"], check=True)
+          print(f"Successfully committed and pushed Stage {next_stage}!")
+          EOF

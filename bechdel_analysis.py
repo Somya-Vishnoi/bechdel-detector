@@ -27,8 +27,6 @@ print("\nMissing Values After Cleaning:\n", data.isna().sum())
 data["decade"] = (data["year"] // 10 * 10).astype(int)
 
 # ---------------- Objective 1 (Graph 1) ----------------
-# Analyze average female dialogue percentage across Bechdel ratings
-
 rating_group = data.groupby("bechdel_rating")["female_dialogue_pct"].mean().reset_index()
 rating_group["bechdel_rating"] = rating_group["bechdel_rating"].astype(str)
 print("\nAvg Female Dialogue % by Bechdel Rating:\n", rating_group)
@@ -42,5 +40,23 @@ plt.title("Objective 1: Female Dialogue Share Across Bechdel Rating Categories")
 for bar in bars:
     plt.text(bar.get_x() + bar.get_width() / 2, bar.get_height() + 0.6,
              f"{bar.get_height():.1f}%", ha='center', va='bottom', fontweight='bold')
+plt.tight_layout()
+plt.show()
+
+# ---------------- Objective 2 (Graph 2) ----------------
+# Track historical evolution of female dialogue share by decade
+
+decade_trend = data.groupby("decade")["female_dialogue_pct"].mean().reset_index()
+print("\nAverage Female Dialogue % by Decade:\n", decade_trend)
+
+plt.figure(figsize=(10, 5))
+plt.plot(decade_trend["decade"], decade_trend["female_dialogue_pct"],
+         marker="o", color="purple", linewidth=2.5, markersize=7)
+plt.fill_between(decade_trend["decade"], decade_trend["female_dialogue_pct"], alpha=0.15, color="purple")
+plt.xlabel("Decade")
+plt.ylabel("Average Female Dialogue (%)")
+plt.title("Objective 2: Historical Evolution of Female Dialogue Share (Decade-wise)")
+plt.grid(True, linestyle="--", alpha=0.6)
+plt.xticks(decade_trend["decade"], rotation=45)
 plt.tight_layout()
 plt.show()

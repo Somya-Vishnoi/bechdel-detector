@@ -1,5 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import seaborn as sns
 
 # 1. Load Dataset
 data = pd.read_csv('bechdel_pudding_dataset.csv')
@@ -44,8 +45,6 @@ plt.tight_layout()
 plt.show()
 
 # ---------------- Objective 2 (Graph 2) ----------------
-# Track historical evolution of female dialogue share by decade
-
 decade_trend = data.groupby("decade")["female_dialogue_pct"].mean().reset_index()
 print("\nAverage Female Dialogue % by Decade:\n", decade_trend)
 
@@ -58,5 +57,18 @@ plt.ylabel("Average Female Dialogue (%)")
 plt.title("Objective 2: Historical Evolution of Female Dialogue Share (Decade-wise)")
 plt.grid(True, linestyle="--", alpha=0.6)
 plt.xticks(decade_trend["decade"], rotation=45)
+plt.tight_layout()
+plt.show()
+
+# ---------------- Objective 3 (Graph 3) ----------------
+# Correlation matrix between dialogue features and Bechdel outcome
+
+corr_cols = ["words_female", "words_male", "female_dialogue_pct",
+             "num_female_chars", "num_male_chars", "bechdel_rating", "pass_bechdel"]
+print("\nCorrelation Matrix:\n", data[corr_cols].corr())
+
+plt.figure(figsize=(9, 6))
+sns.heatmap(data[corr_cols].corr(), annot=True, cmap="coolwarm", fmt=".2f", linewidths=0.5)
+plt.title("Objective 3: Correlation Matrix of Dialogue Parameters & Bechdel Test")
 plt.tight_layout()
 plt.show()

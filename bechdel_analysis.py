@@ -61,8 +61,6 @@ plt.tight_layout()
 plt.show()
 
 # ---------------- Objective 3 (Graph 3) ----------------
-# Correlation matrix between dialogue features and Bechdel outcome
-
 corr_cols = ["words_female", "words_male", "female_dialogue_pct",
              "num_female_chars", "num_male_chars", "bechdel_rating", "pass_bechdel"]
 print("\nCorrelation Matrix:\n", data[corr_cols].corr())
@@ -70,5 +68,28 @@ print("\nCorrelation Matrix:\n", data[corr_cols].corr())
 plt.figure(figsize=(9, 6))
 sns.heatmap(data[corr_cols].corr(), annot=True, cmap="coolwarm", fmt=".2f", linewidths=0.5)
 plt.title("Objective 3: Correlation Matrix of Dialogue Parameters & Bechdel Test")
+plt.tight_layout()
+plt.show()
+
+# ---------------- Objective 4 (Graph 4) ----------------
+# Outlier detection and filtering using Interquartile Range (IQR)
+
+outlier_cols = ["words_female", "words_male", "female_dialogue_pct"]
+
+condition = pd.Series(True, index=data.index)
+for col in outlier_cols:
+    Q1 = data[col].quantile(0.25)
+    Q3 = data[col].quantile(0.75)
+    IQR = Q3 - Q1
+    lower_bound = Q1 - 1.5 * IQR
+    upper_bound = Q3 + 1.5 * IQR
+    condition &= (data[col] >= lower_bound) & (data[col] <= upper_bound)
+
+data = data[condition].reset_index(drop=True)
+print(f"\nDataset size after IQR outlier filtering: {len(data)} rows")
+
+plt.figure(figsize=(10, 5))
+sns.boxplot(data=data[outlier_cols], palette="Set2")
+plt.title("Objective 4: Outlier Detection & Cleaned Distribution in Dialogue Metrics")
 plt.tight_layout()
 plt.show()

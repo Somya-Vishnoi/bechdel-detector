@@ -93,3 +93,14 @@ sns.boxplot(data=data[outlier_cols], palette="Set2")
 plt.title("Objective 4: Outlier Detection & Cleaned Distribution in Dialogue Metrics")
 plt.tight_layout()
 plt.show()
+
+# ============================================================
+# 3. Normalization (MinMaxScaler)
+# ============================================================
+
+from sklearn.preprocessing import MinMaxScaler
+
+scaler = MinMaxScaler()
+scale_features = ["words_female", "words_male", "num_female_chars", "num_male_chars"]
+data[scale_features] = scaler.fit_transform(data[scale_features])
+print("\nNormalized Features Summary:\n", data[scale_features].describe())

@@ -104,3 +104,33 @@ scaler = MinMaxScaler()
 scale_features = ["words_female", "words_male", "num_female_chars", "num_male_chars"]
 data[scale_features] = scaler.fit_transform(data[scale_features])
 print("\nNormalized Features Summary:\n", data[scale_features].describe())
+
+# ---------------- Objective 5 (Regression Baselines) ----------------
+import numpy as np
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
+
+y_reg = data["female_dialogue_pct"]
+train_idx, test_idx = train_test_split(data.index, test_size=0.2, random_state=42)
+
+# Simple Linear Regression
+X_simple_train = data.loc[train_idx, [scale_features[0]]]
+X_simple_test = data.loc[test_idx, [scale_features[0]]]
+y_reg_train = y_reg.loc[train_idx]
+y_reg_test = y_reg.loc[test_idx]
+
+simple_lr = LinearRegression()
+simple_lr.fit(X_simple_train, y_reg_train)
+y_pred_simple = simple_lr.predict(X_simple_test)
+
+# Multiple Linear Regression (OLS)
+X_mult_train = data.loc[train_idx, scale_features]
+X_mult_test = data.loc[test_idx, scale_features]
+
+multi_lr = LinearRegression()
+multi_lr.fit(X_mult_train, y_reg_train)
+y_pred_multi = multi_lr.predict(X_mult_test)
+
+print("\nSimple Linear Regression R2:", r2_score(y_reg_test, y_pred_simple))
+print("Multiple Linear Regression R2:", r2_score(y_reg_test, y_pred_multi))

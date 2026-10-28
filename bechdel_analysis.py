@@ -105,10 +105,12 @@ scale_features = ["words_female", "words_male", "num_female_chars", "num_male_ch
 data[scale_features] = scaler.fit_transform(data[scale_features])
 print("\nNormalized Features Summary:\n", data[scale_features].describe())
 
-# ---------------- Objective 5 (Regression Baselines) ----------------
+# ---------------- Objective 5 (Graph 5) ----------------
+# Supervised Regression Modeling (Simple, Multiple OLS, Polynomial)
 import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
+from sklearn.preprocessing import PolynomialFeatures
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 
 y_reg = data["female_dialogue_pct"]
@@ -132,5 +134,40 @@ multi_lr = LinearRegression()
 multi_lr.fit(X_mult_train, y_reg_train)
 y_pred_multi = multi_lr.predict(X_mult_test)
 
-print("\nSimple Linear Regression R2:", r2_score(y_reg_test, y_pred_simple))
-print("Multiple Linear Regression R2:", r2_score(y_reg_test, y_pred_multi))
+# Polynomial Regression (Degree 2)
+poly = PolynomialFeatures(degree=2, include_bias=False)
+X_poly_train = poly.fit_transform(X_mult_train)
+X_poly_test = poly.transform(X_mult_test)
+
+poly_lr = LinearRegression()
+poly_lr.fit(X_poly_train, y_reg_train)
+y_pred_poly = poly_lr.predict(X_poly_test)
+
+def evaluate_regression(y_true, y_pred, name):
+    mae = mean_absolute_error(y_true, y_pred)
+    mse = mean_squared_error(y_true, y_pred)
+    rmse = np.sqrt(mse)
+    r2 = r2_score(y_true, y_pred)
+    return {"Model": name, "MAE": mae, "MSE": mse, "RMSE": rmse, "R2_Score": r2}
+
+reg_results = [
+    evaluate_regression(y_reg_test, y_pred_simple, "Simple Linear Regression"),
+    evaluate_regression(y_reg_test, y_pred_multi, "Multiple Linear Regression (OLS)"),
+    evaluate_regression(y_reg_test, y_pred_poly, "Polynomial Regression (Degree 2)")
+]
+
+reg_df = pd.DataFrame(reg_results)
+print("\n--- Regression Models Performance Comparison ---")
+print(reg_df.to_string(index=False))
+
+plt.figure(figsize=(10, 5))
+plt.scatter(y_reg_test, y_pred_poly, color="purple", alpha=0.6, label="Polynomial Reg Predictions")
+plt.plot([y_reg_test.min(), y_reg_test.max()], [y_reg_test.min(), y_reg_test.max()],
+         color="red", linestyle="--", linewidth=2, label="Ideal Fit Line")
+plt.xlabel("Actual Female Dialogue %")
+plt.ylabel("Predicted Female Dialogue %")
+plt.title(f"Objective 5: Regression Evaluation — Actual vs. Predicted (R² = {reg_df.loc[2, 'R2_Score']:.3f})")
+plt.legend()
+plt.grid(True, alpha=0.3)
+plt.tight_layout()
+plt.show()

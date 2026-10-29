@@ -4,14 +4,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![Scikit-Learn](https://img.shields.io/badge/scikit--learn-1.4%2B-orange.svg)](https://scikit-learn.org/)
 [![Pandas](https://img.shields.io/badge/pandas-2.2%2B-darkblue.svg)](https://pandas.pydata.org/)
-[![Course INT375](https://img.shields.io/badge/Course-INT375%20Data%20Science-red.svg)](https://www.lpu.in/)
-[![Academic Year 2026](https://img.shields.io/badge/Academic%20Year-2026-purple.svg)](https://www.lpu.in/)
 
-> **Academic Project Report & Codebase**  
-> **Course:** INT375 — Data Science Toolbox: Python Programming  
-> **Institution:** School of Computer Science and Engineering, Lovely Professional University (LPU), Phagwara  
-> **Author:** Somya Vishnoi (Reg No: 12417615, Programme: B.Tech CSE, Section: 324PB)  
-> **Supervisor:** Dr. Gargi Sharma (Assistant Professor, UID: 29439)  
+
 > **Full Academic Report (.docx):** [`Screenplay_Dialogue_Bechdel_Analysis_Report.docx`](Screenplay_Dialogue_Bechdel_Analysis_Report.docx)  
 > **Repository URL:** [https://github.com/Somya-Vishnoi/bechdel-detector](https://github.com/Somya-Vishnoi/bechdel-detector)
 

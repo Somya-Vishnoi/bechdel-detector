@@ -171,3 +171,27 @@ plt.legend()
 plt.grid(True, alpha=0.3)
 plt.tight_layout()
 plt.show()
+
+# ---------------- Objective 6 (Classification Baselines) ----------------
+from sklearn.linear_model import LogisticRegression
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.naive_bayes import GaussianNB
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
+
+X_clf = data[["female_dialogue_pct", "words_female", "words_male", "num_female_chars", "num_male_chars"]]
+y_clf = data["pass_bechdel"]
+
+X_train_c, X_test_c, y_train_c, y_test_c = train_test_split(
+    X_clf, y_clf, test_size=0.2, random_state=42, stratify=y_clf
+)
+
+base_models = {
+    "Logistic Regression": LogisticRegression(max_iter=1000, random_state=42),
+    "k-Nearest Neighbors": KNeighborsClassifier(n_neighbors=7),
+    "Naïve Bayes": GaussianNB()
+}
+
+for name, clf in base_models.items():
+    clf.fit(X_train_c, y_train_c)
+    pred = clf.predict(X_test_c)
+    print(f"{name} -> Accuracy: {accuracy_score(y_test_c, pred):.4f}, F1: {f1_score(y_test_c, pred):.4f}")

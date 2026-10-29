@@ -44,3 +44,16 @@ meta_data7.csv
 build_dataset.py
 .autocommit.log
 bechdel_analysis_full.py
+
+# Report generation scratch files
+~$*
+test_*.docx
+extracted_sample_pdf.txt
+generate_report_*.py
+build_full_report_master.py
+concatenate_and_run.py
+create_report_part1.py
+setup_report_generator.py
+generate_updated_frontmatter.py
+report_figures/
+
